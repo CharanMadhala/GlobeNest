@@ -1,9 +1,9 @@
-<h2> Airbnb (Database:Wanderlust, collection: wanderlust) - MERN Stack, RESTful API's</h2>
+<h2> Airbnb (Database:wanderlust, collection: listings) - MERN Stack, RESTful API's</h2>
 <ul>
     <li>Index Route: GET /listings - to display all Listings</li>
     <li>Show Route: GET /listings/:id - to display individual lsiting</li>
-    <!-- <li></li> -->
-    <!-- <li></li> -->
+    <li>New route - GET /listings/new - get data from user</li>
+    <li> Create route - POST /listings - inserting data to MongoDB </li>
     <!-- <li></li> -->
 </ul>
 <!-- Phase 1 (part a)
