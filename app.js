@@ -8,6 +8,8 @@ const path = require("path");
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
+app.use(express.urlencoded({extended: true}));
+app.use(express.json());
 
 main().then(()=>{
     console.log("DB connection sucessful");
@@ -28,6 +30,34 @@ app.get("/listings", async (req, res)=>{
     const allListings = await Listing.find({});
     res.render("\listings/index.ejs", {allListings});
 });
+
+//[7]New Route
+app.get("/listings/new", (req, res)=>{
+    res.render("\listings/new.ejs");
+});
+
+//[7]Create Route
+app.post("/listings", async (req, res)=>{
+    // console.log(req.body);
+    const listing = new Listing(req.body);
+    await listing.save();
+    // console.log(req.body);
+    res.redirect("/listings");
+    // const listing = res.body;
+    // await Listing.insertOne();
+});
+
+//Show Route - to diaplay all Listings
+app.get("/listings/:id", async (req, res)=>{
+    const { id } = req.params;
+    const listing = await Listing.findById(id);
+    // console.log(list);
+    res.render("\listings/show.ejs", { listing });
+    // console.log(req.params);
+    // res.send(`get request to ${id}`);
+});
+
+
 
 
 // app.get("/test/listing", async (req, res)=>{

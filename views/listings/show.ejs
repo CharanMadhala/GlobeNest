@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listing</title>
+</head>
+<body>
+    <h3>list id: <%= listing._id%></h3>
+    <h1>list title: <%= listing.title %></h1>
+    <p>Description: <%= listing.description %></p>
+    <img src="<%= listing.image.url %>" alt="image" height=300rem>
+    <!-- &#8377; is code for displaying rupees symbol . 
+         .toLocaleString("en-IN") is used to put commas in pricing. "en-IN" used to indicate India way of putting commas -->
+    <h2>&#8377; <%= listing.price.toLocaleString("en-IN") %></h2>
+    <h2><%= listing.location %></h2>
+    <h2><%= listing.country %></h2>
+    
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Listing</title>
+</head>
+<body>
+    <h3>Create new listing</h3>
+    <form method="POST" action="/listings">
+        title:<input type="text" name="title" placeholder="Enter title">
+        <br><br>
+        description:<textarea name="description" placeholder="enter description"></textarea>
+        <br><br>
+        <!-- image[url] ..make image as object and url as key, beacuse that's the schema we defined ... ex: {image:{url: }} -->
+        image url: <input type="text" name="image[url]" placeholder="upload image">
+        <br><br>
+        image filename: <input type="text" name="image[filename]" placeholder="enter image">
+        <br><br>
+        price: <input type="number" name="price" placeholder="Enter price">
+        <br><br>
+        location: <input type="text" name="location" placeholder="Enter location">
+        <br><br>
+        country: <input type="text" name="country" placeholder="Enter country">
+        <br><br>
+        <button>ADD</button>
+    </form>
+</body>
+</html>
