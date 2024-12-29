@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wander Lust</title>
+</head>
+<body>
+    <h3>Edit listing</h3>
+    <form method="POST" action="/listings/<%= listing._id %>?_method=PUT">
+        title:<input type="text" name="title" value="<%= listing.title %>">
+        <br><br>
+        description:<textarea name="description" ><%= listing.title %></textarea>
+        <br><br>
+        <!-- image[url] ..make image as object and url as key, beacuse that's the schema we defined ... ex: {image:{url: }} -->
+        image url: <input type="text" name="image[url]" value="<%= listing.image.url %>">
+        <br><br>
+        image filename: <input type="text" name="image[filename]" value="<%= listing.image.filename %>">
+        <br><br>
+        price: <input type="number" name="price" value="<%= listing.price %>">
+        <br><br>
+        location: <input type="text" name="location" value="<%= listing.location %>">
+        <br><br>
+        country: <input type="text" name="country" value="<%= listing.country %>">
+        <br><br>
+        <button> Edit </button>
+    </form>
+</body>
+</html>

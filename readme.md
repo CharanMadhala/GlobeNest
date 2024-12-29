@@ -4,6 +4,8 @@
     <li>Show Route: GET /listings/:id - to display individual lsiting</li>
     <li>New route - GET /listings/new - get data from user</li>
     <li> Create route - POST /listings - inserting data to MongoDB </li>
+    <li>Edit Route - GET /listings/:id/edit - form to edit particular listing and submit.</li>
+    <li>Update Route - PUT /litings/:id - update listing and redirect to listing.</li>
     <!-- <li></li> -->
 </ul>
 <!-- Phase 1 (part a)
@@ -21,6 +23,10 @@ initialise database, data link: https://github.com/apna-college/wanderlust/blob/
 [5] Index Route: GET /listings - to display all Listings
 [6] Show Route: GET /listings/:id - to desplay individual listing
 [7] New and Create Route - 
- New route - GET /listings/new - get data from user
- Create route - POST /listings - inserting data to MongoDB
+    New route - GET /listings/new - get data from user
+    Create route - POST /listings - inserting data to MongoDB
+[8] Edit and Update Route
+    Edit Route - GET /listings/:id/edit - form to edit particular listing and submit.
+    Update Route - PUT /litings/:id - update listing and redirect to listing.
+
  -->
