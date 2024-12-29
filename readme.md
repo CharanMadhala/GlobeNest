@@ -5,7 +5,8 @@
     <li>New route - GET /listings/new - get data from user</li>
     <li> Create route - POST /listings - inserting data to MongoDB </li>
     <li>Edit Route - GET /listings/:id/edit - form to edit particular listing and submit.</li>
-    <li>Update Route - PUT /litings/:id - update listing and redirect to listing.</li>
+    <li>Update Route - PUT /litings/:id - update listing and redirect to SHOW Route.</li>
+    <li>Delete Route - DELETE /listings/:id - delete particular listing and redirect to GET /listings</li>
     <!-- <li></li> -->
 </ul>
 <!-- Phase 1 (part a)
@@ -27,6 +28,7 @@ initialise database, data link: https://github.com/apna-college/wanderlust/blob/
     Create route - POST /listings - inserting data to MongoDB
 [8] Edit and Update Route
     Edit Route - GET /listings/:id/edit - form to edit particular listing and submit.
-    Update Route - PUT /litings/:id - update listing and redirect to listing.
+    Update Route - PUT /listings/:id - update listing and redirect to SHOW Route.
+[9] Delete Route - DELETE /listings/:id - delete particular listing and redirect to GET /listings.
 
  -->

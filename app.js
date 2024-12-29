@@ -5,7 +5,7 @@ const mongoose = require("mongoose");
 const MONGO_URL = "mongodb://127.0.0.1:27017/wanderlust";
 const Listing = require("./models/listing.js");
 const path = require("path");
-const methodOveride = require("method-override");
+const methodOverride = require("method-override");
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
@@ -49,6 +49,14 @@ app.post("/listings", async (req, res)=>{
     // await Listing.insertOne();
 });
 
+//[9] - Delete Route
+app.delete("/listings/:id", async (req, res)=>{
+    let { id } = req.params;
+    const deletedListing = await Listing.findByIdAndDelete(id);
+    console.log(deletedListing);
+    res.redirect("/listings");
+});
+
 //Show Route - to diaplay all Listings
 app.get("/listings/:id", async (req, res)=>{
     const { id } = req.params;
@@ -66,13 +74,15 @@ app.get("/listings/:id/edit", async (req, res)=>{
     res.render("\listings/edit.ejs", { listing });
 
 });
-//[9] Update Route -- update listing
+//[8] Update Route -- update listing
 app.put("/listings/:id", async (req, res)=>{
     let { id } = req.params;
     // console.log(req.body);
     await Listing.findByIdAndUpdate(id, {...req.body});
     res.redirect(`/listings/${ id }`);
 });
+
+
 
 
 
