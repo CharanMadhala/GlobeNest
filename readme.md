@@ -9,7 +9,7 @@
     <li>Delete Route - DELETE /listings/:id - delete particular listing and redirect to GET /listings</li>
     <!-- <li></li> -->
 </ul>
-<!-- Phase 1 (part a)
+<!-- Phase 1 (part a) - CRUD operations
 [1] basic setup -- installing express, ejs, mongoose. 
     index.js -- require express, initialize app, lister to port for requests, setup up home root "/" to verify working.
     require mongoose, setup connection.
@@ -30,5 +30,11 @@ initialise database, data link: https://github.com/apna-college/wanderlust/blob/
     Edit Route - GET /listings/:id/edit - form to edit particular listing and submit.
     Update Route - PUT /listings/:id - update listing and redirect to SHOW Route.
 [9] Delete Route - DELETE /listings/:id - delete particular listing and redirect to GET /listings.
+
+ -->
+
+ <!-- Phase 1 (Part b) - Apply Styling 
+[10] 01) Creating Boilerplate -- making use of EJS Mate (npm i ejs-mate, const ejsMate = require("ejs-mate"), app.engine('ejs', ejsMate)) to enhanced templating. common templatings in many pages can be put into views/layouts folder (here we have boilerplate.ejs) and import in ejs files ex: like Navbar, Footer etc..
+ And Creting public folder. May contain css files,js files,images.
 
  -->
