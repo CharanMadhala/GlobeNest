@@ -13,14 +13,10 @@
 [1] basic setup -- installing express, ejs, mongoose. 
     index.js -- require express, initialize app, lister to port for requests, setup up home root "/" to verify working.
     require mongoose, setup connection.
-
 [2] define Schema and model(in models/listing.js) and export it. require listing in app.js. create new document using instance of listing. verfiy whether document insertion is working through mongosh (MongoDb shell).
-
 [3] repository link: https://github.com/apna-college/wanderlust
 initialise database, data link: https://github.com/apna-college/wanderlust/blob/main/init/data.js
-
 [4] Initilization of database: used to intialize databse with new data, helpfull whenever we need to reinitialise database. File: init/data.js (contains data).... File: init/index.js (contains required to code to cleanup existing database and insert intilisation data).
-
 [5] Index Route: GET /listings - to display all Listings
 [6] Show Route: GET /listings/:id - to desplay individual listing
 [7] New and Create Route - 
@@ -37,4 +33,5 @@ initialise database, data link: https://github.com/apna-college/wanderlust/blob/
 [10] 01) Creating Boilerplate -- making use of EJS Mate (npm i ejs-mate, const ejsMate = require("ejs-mate"), app.engine('ejs', ejsMate)) to enhanced templating. common templatings in many pages can be put into views/layouts folder (here we have boilerplate.ejs) and import in ejs files ex: like Navbar, Footer etc..
  And Creting public folder. May contain css files,js files,images.
 
+[11] 02. Navbar (views/includes/navbar.ejs)- attaching NavBar in Boilerplate file, using Bootstrap
  -->

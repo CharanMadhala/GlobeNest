@@ -27,7 +27,7 @@ async function main(){
 }
 
 app.get("/", (req, res)=>{
-    res.send("get request working");
+    res.send("I am root");
 });
 
 //Index Route - to display all Listings

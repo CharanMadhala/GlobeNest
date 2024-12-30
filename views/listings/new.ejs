@@ -1,16 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wander Lust</title>
-</head>
+<% layout("/layouts/boilerplate") %>
 <body>
     <h3>Create new listing</h3>
     <form method="POST" action="/listings">
         title:<input type="text" name="title" placeholder="Enter title">
         <br><br>
-        description:<textarea name="description" placeholder="enter description"></textarea>
+        description:
+        <textarea name="description" placeholder="enter description" rows="4" cols="60"></textarea>
         <br><br>
         <!-- image[url] ..make image as object and url as key, beacuse that's the schema we defined ... ex: {image:{url: }} -->
         image url: <input type="text" name="image[url]" placeholder="upload image">
@@ -26,4 +21,3 @@
         <button>ADD</button>
     </form>
 </body>
-</html>
