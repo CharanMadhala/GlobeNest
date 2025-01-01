@@ -17,3 +17,34 @@ body, .container {
     color: #222222 !important;
 }
 
+/* Footer */
+.f-info {
+    height: 8rem;
+    background-color: #ebebeb;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.f-info-socials, .f-info-brand, .f-info-links{
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.f-info-socials i {
+    font-size: 1.2rem;
+    margin-right: 1rem;
+    /* padding: 0.2rem; */
+}
+.f-info-socials i:hover {
+    color: #fe424d;
+}
+.f-info-links a{
+    text-decoration: none;
+    color: #222222;
+}
+.f-info-links a:hover{
+    text-decoration: underline;
+}

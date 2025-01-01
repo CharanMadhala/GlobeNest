@@ -1,4 +1,4 @@
-<h2> Airbnb (Database:wanderlust, collection: listings) - MERN Stack, RESTful API's</h2>
+<h2> Airbnb (Database:wanderlust, collection: listings) - MEN Stack (without React), RESTful API's</h2>
 <ul>
     <li>Index Route: GET /listings - to display all Listings</li>
     <li>Show Route: GET /listings/:id - to display individual lsiting</li>
@@ -34,5 +34,5 @@ initialise database, data link: https://github.com/apna-college/wanderlust/blob/
  And Creting public folder. May contain css files,js files,images.
 
 [11] 02. Navbar (views/includes/navbar.ejs)- attaching NavBar in Boilerplate file, using Bootstrap
-[12] 03. Footer
+[12] 03. Footer (views/includes/footer.ejs) - attaching Footer in Boilerplate file
  -->
