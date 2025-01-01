@@ -43,6 +43,8 @@ FLEX BASIS: 0 allows all elements to occupy availabe free space evenly and all e
 
 ROW-COLS: splitting screen into rows and cols and adjusting elements size; bootstrap-gutters
 
+[15] 06.Styling Edit Listipng page - same style as Add New Listing page. only difference is we use value="" attribute insted of placeholder.
+
 
 
 

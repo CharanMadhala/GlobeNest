@@ -64,6 +64,11 @@ body {
     border: none !important;
     background-color: #fe424d !important;
 }
+/* Edit Listing */
+.edit-btn {
+    border: none !important;
+    background-color: #fe424d !important;
+}
 /* Footer */
 .f-info {
     height: 8rem;
