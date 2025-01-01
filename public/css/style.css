@@ -1,5 +1,6 @@
 body {
     overflow-x: hidden;
+    font-family: "Plus Jakarta Sans", serif !important;
 }
 
 .navbar {
@@ -32,11 +33,15 @@ body {
     text-decoration: none;
 }
 .card-img-top {
-    width: 100%;
-    border-radius: 1rem;
+    width: 100% !important;
+    border-radius: 1rem !important;
+    object-fit: cover !important;
 }
 .card-body {
     padding: 0;
+}
+.card-text p {
+    font-weight: 400 !important;
 }
 /* cards overlay effect - displaying white bg on image to poin that it is hovered */
 .card-img-overlay {
