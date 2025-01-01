@@ -1,8 +1,15 @@
 body {
     overflow-x: hidden;
     font-family: "Plus Jakarta Sans", serif !important;
+    /* to kepp footer at bottom of page (conatiner will occupy all space usinf flex:1, remainge will be taken by footer) */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
-
+.container {
+    /* flew-grow:1 fle-shrink-1 flex-basis: 0 */
+    flex: 1; 
+}
 .navbar {
     /* height: 5rem !important; */
     background-color: white !important;
@@ -50,6 +57,12 @@ body {
 .card-img-overlay:hover {
     opacity: 0.2;
     background-color: white;
+}
+
+/* Create new listing - form*/
+.add-btn {
+    border: none !important;
+    background-color: #fe424d !important;
 }
 /* Footer */
 .f-info {

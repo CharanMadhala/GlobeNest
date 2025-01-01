@@ -1,23 +1,48 @@
 <% layout("/layouts/boilerplate") %>
 <body>
-    <h3>Create new listing</h3>
-    <form method="POST" action="/listings">
-        title:<input type="text" name="title" placeholder="Enter title">
-        <br><br>
-        description:
-        <textarea name="description" placeholder="enter description" rows="4" cols="60"></textarea>
-        <br><br>
-        <!-- image[url] ..make image as object and url as key, beacuse that's the schema we defined ... ex: {image:{url: }} -->
-        image url: <input type="text" name="image[url]" placeholder="upload image">
-        <br><br>
-        image filename: <input type="text" name="image[filename]" placeholder="enter image">
-        <br><br>
-        price: <input type="number" name="price" placeholder="Enter price">
-        <br><br>
-        location: <input type="text" name="location" placeholder="Enter location">
-        <br><br>
-        country: <input type="text" name="country" placeholder="Enter country">
-        <br><br>
-        <button>ADD</button>
-    </form>
+    <div class="row">
+        <!-- offset-2 takes two spaces from left -->
+        <div class="col-8 offset-2">
+            <h3>Create new listing</h3>
+            <form method="POST" action="/listings">
+                <!-- each input is given seperate <div> and <label class="form-label"> <input class="form-control">-->
+                <div class="mb-3">
+                    <label for="title" class="form-label">Title</label>
+                    <input type="text" name="title" placeholder="Add a catchy title" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="description" class="form-label">Description</label>
+                    <textarea name="description" class="form-control"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="image url" class="form-label">Image URL</label>
+                    <!-- image[url] ..make image as object and url as key, beacuse that's the schema we defined ... ex: {image:{url: }} -->
+                    <input type="text" name="image[url]" placeholder="Enter image URL/Link" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="image title" class="form-label">Image Title</label>
+                    <input type="text" name="image[filename]" placeholder="Enter image title" class="form-control">
+                </div>
+                <div class="row">
+                    <div class="mb-3 col-md-4">
+                        <label for="price" class="form-label">Price</label>
+                        <input type="number" name="price" placeholder="Ex: 1200" class="form-control">
+                    </div>
+                    <div class="mb-3 col-md-8">
+                        <label for="country" class="form-label">Country</label>
+                        <input type="text" name="country" placeholder="Ex: India" class="form-control">
+                    </div>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="location" class="form-label">Location</label>
+                    <input type="text" name="location" placeholder="Ex: Jaipur, Rajasthan" class="form-control">
+                </div>
+                
+                
+                <button class="btn btn-dark mb-3 add-btn">ADD</button>
+            </form>
+        </div>
+    </div>
+    
 </body>

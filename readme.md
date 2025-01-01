@@ -36,6 +36,14 @@ initialise database, data link: https://github.com/apna-college/wanderlust/blob/
 [11] 02. Navbar (views/includes/navbar.ejs)- attaching NavBar in Boilerplate file, using Bootstrap
 [12] 03. Footer (views/includes/footer.ejs) - attaching Footer in Boilerplate file
 [13] 04. Index page Styling -> displaying contents in card using bootstrap (modifying /listings/index.ejs)
+[14] 05. Styling New Listing (Add new listing page) 
+important concepts: flex: 1; (short hand for flex: flex-grow flex-shrink flex-basis) used for responsiveness when parent container is flex. FLEW GROW: default(0) means even if conainer have empty space, elements will not occupy anythin. value "1" means elements will equally occupy empty space. can have any range of positive number's and each element/child can have different value. value "2" mean element occupies free space twice than other elements.
+FLEW SHRINK: default(1) means the elements will shrink if window/screen size decreases to fit current size, value "0" - element will not shrink and overflows. 
+FLEX BASIS: 0 allows all elements to occupy availabe free space evenly and all element will have same size.
+
+ROW-COLS: splitting screen into rows and cols and adjusting elements size; bootstrap-gutters
+
+
 
 
  -->
