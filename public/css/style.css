@@ -1,12 +1,16 @@
-body, .container {
-    background-color: rgb(255, 212, 127);
+body {
+    overflow-x: hidden;
 }
 
 .navbar {
-    height: 5rem;
+    /* height: 5rem !important; */
     background-color: white !important;
 }
+.navbar-brand {
+    border: none;
+    text-decoration: none;
 
+}
 .fa-compass {
     color: #fe424d;
     font-size: 2rem;
@@ -17,6 +21,31 @@ body, .container {
     color: #222222 !important;
 }
 
+/* All listings (index page: index.ejs) */
+/* cards styling */
+.card {
+    border: none;
+    
+    margin-bottom: 2rem;
+}
+.card-link {
+    text-decoration: none;
+}
+.card-img-top {
+    width: 100%;
+    border-radius: 1rem;
+}
+.card-body {
+    padding: 0;
+}
+/* cards overlay effect - displaying white bg on image to poin that it is hovered */
+.card-img-overlay {
+    opacity: 0;
+}
+.card-img-overlay:hover {
+    opacity: 0.2;
+    background-color: white;
+}
 /* Footer */
 .f-info {
     height: 8rem;

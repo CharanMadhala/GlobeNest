@@ -35,4 +35,7 @@ initialise database, data link: https://github.com/apna-college/wanderlust/blob/
 
 [11] 02. Navbar (views/includes/navbar.ejs)- attaching NavBar in Boilerplate file, using Bootstrap
 [12] 03. Footer (views/includes/footer.ejs) - attaching Footer in Boilerplate file
+[13] 04. Index page Styling -> displaying contents in card using bootstrap (modifying /listings/index.ejs)
+
+
  -->
