@@ -45,6 +45,9 @@ ROW-COLS: splitting screen into rows and cols and adjusting elements size; boots
 
 [15] 06.Styling Edit Listing page - same style as Add New Listing page. only difference is we use value="" attribute insted of placeholder.
 
+[16] 07.Styling Show Listing using Bootstrap
+
+
 
 
 

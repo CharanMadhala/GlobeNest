@@ -69,6 +69,18 @@ body {
     border: none !important;
     background-color: #fe424d !important;
 }
+
+/* Show Listing */
+.card-img-top {
+    height: 30vh;
+    object-fit: cover;
+}
+.show-btns{
+    display: flex !important;
+    justify-content: left;
+    width: 100%;
+}
+
 /* Footer */
 .f-info {
     height: 8rem;
