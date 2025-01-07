@@ -4,15 +4,15 @@
         <!-- offset-2 takes two spaces from left -->
         <div class="col-8 offset-2">
             <h3>Create a New Listing</h3>
-            <form method="POST" action="/listings">
+            <form method="POST" action="/listings" novalidate class="needs-validation">
                 <!-- each input is given seperate <div> and <label class="form-label"> <input class="form-control">-->
                 <div class="mb-3">
-                    <label for="title" class="form-label">Title</label>
-                    <input type="text" name="title" placeholder="Add a catchy title" class="form-control">
+                    <label for="title" class="form-label" required>Title</label>
+                    <input type="text" name="title" placeholder="Add a catchy title" class="form-control" required>
                 </div>
                 <div class="mb-3">
                     <label for="description" class="form-label">Description</label>
-                    <textarea name="description" class="form-control"></textarea>
+                    <textarea name="description" class="form-control" required></textarea>
                 </div>
                 <div class="mb-3">
                     <label for="image url" class="form-label">Image URL</label>
@@ -21,22 +21,22 @@
                 </div>
                 <div class="mb-3">
                     <label for="image title" class="form-label">Image Title</label>
-                    <input type="text" name="image[filename]" placeholder="Enter image title" class="form-control">
+                    <input type="text" name="image[filename]" placeholder="Enter image title" class="form-control" required>
                 </div>
                 <div class="row">
                     <div class="mb-3 col-md-4">
                         <label for="price" class="form-label">Price</label>
-                        <input type="number" name="price" placeholder="Ex: 1200" class="form-control">
+                        <input type="number" name="price" placeholder="Ex: 1200" class="form-control" required>
                     </div>
                     <div class="mb-3 col-md-8">
                         <label for="country" class="form-label">Country</label>
-                        <input type="text" name="country" placeholder="Ex: India" class="form-control">
+                        <input type="text" name="country" placeholder="Ex: India" class="form-control" required>
                     </div>
                 </div>
                 
                 <div class="mb-3">
                     <label for="location" class="form-label">Location</label>
-                    <input type="text" name="location" placeholder="Ex: Jaipur, Rajasthan" class="form-control">
+                    <input type="text" name="location" placeholder="Ex: Jaipur, Rajasthan" class="form-control" required>
                 </div>
                 
                 

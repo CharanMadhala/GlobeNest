@@ -47,9 +47,11 @@ ROW-COLS: splitting screen into rows and cols and adjusting elements size; boots
 
 [16] 07.Styling Show Listing using Bootstrap
 [17] 50, 51 folders - Learnt Middlewares and Error Handling.
+ -->
 
+ <!-- 51. Project - Phase 1(Part c) 
+ [18] 01. Client-Side Form Validation - using Bootstrap form validations and disabling browsers default validation.
+ Step 1: adding "novalidate" if form tag. second, adding class="needs-validation" in form tag. third, adding js code(in bootdtrap website) in public/js/script.js file and mentioning it in boilerplate.ejs.
 
-
-
-
+ 
  -->
