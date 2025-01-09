@@ -53,5 +53,6 @@ ROW-COLS: splitting screen into rows and cols and adjusting elements size; boots
  [18] 01. Client-Side Form Validation - using Bootstrap form validations and disabling browsers default validation.
  Step 1: adding "novalidate" if form tag. second, adding class="needs-validation" in form tag. third, adding js code(in bootdtrap website) in public/js/script.js file and mentioning it in boilerplate.ejs.
 
+[19] 02. Success and Failure text (displaying message with validation in form) in both new.ejs and edit.ejs.
  
  -->
