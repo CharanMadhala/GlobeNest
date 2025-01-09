@@ -57,4 +57,6 @@ ROW-COLS: splitting screen into rows and cols and adjusting elements size; boots
  but there is still vulnerability in our verification as we can't send data via form, if we send data via hoppscotch or API directly then invalid data get stored in database so we need to use server side validation.
 
  [20] 03. Custom error Hnadling. adding middleware in app.js to handle error while adding new data to database.
+
+ [21] 04. Adding wrapAsync /utils/wrapAsync.js. making use of wrapAsync in place of try-catch block done in above (create route). 
  -->

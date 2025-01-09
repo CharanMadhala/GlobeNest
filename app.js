@@ -7,6 +7,7 @@ const Listing = require("./models/listing.js");
 const path = require("path");
 const methodOverride = require("method-override");
 const ejsMate = require("ejs-mate");
+const wrapAsync = require("./utils/wrapAsync.js");
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
@@ -43,8 +44,8 @@ app.get("/listings/new", (req, res)=>{
 
 //[7]Create Route
 //error handling is also done here, if we insert any invalid data to mongodb then we will get error.
-app.post("/listings", async (req, res, next)=>{
-    try {
+app.post("/listings", wrapAsync(async (req, res, next)=>{
+    
         // console.log(req.body);
         const listing = new Listing(req.body);
         await listing.save();
@@ -52,11 +53,9 @@ app.post("/listings", async (req, res, next)=>{
         res.redirect("/listings");
         // const listing = res.body;
         // await Listing.insertOne();
-    }catch(err){
-        next(err);
-    }
     
-});
+    
+}));
 
 //[9] - Delete Route
 app.delete("/listings/:id", async (req, res)=>{
