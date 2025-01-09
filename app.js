@@ -42,14 +42,20 @@ app.get("/listings/new", (req, res)=>{
 });
 
 //[7]Create Route
-app.post("/listings", async (req, res)=>{
-    // console.log(req.body);
-    const listing = new Listing(req.body);
-    await listing.save();
-    // console.log(req.body);
-    res.redirect("/listings");
-    // const listing = res.body;
-    // await Listing.insertOne();
+//error handling is also done here, if we insert any invalid data to mongodb then we will get error.
+app.post("/listings", async (req, res, next)=>{
+    try {
+        // console.log(req.body);
+        const listing = new Listing(req.body);
+        await listing.save();
+        // console.log(req.body);
+        res.redirect("/listings");
+        // const listing = res.body;
+        // await Listing.insertOne();
+    }catch(err){
+        next(err);
+    }
+    
 });
 
 //[9] - Delete Route
@@ -90,7 +96,10 @@ app.put("/listings/:id", async (req, res)=>{
 
 
 
-
+// middleware to hande custom error
+app.use((err, req, res, next) => {
+    res.send("something went wrong!");
+});
 // app.get("/test/listing", async (req, res)=>{
 //     let sampleListing = new Listing({
 //         title: "My new Villa",

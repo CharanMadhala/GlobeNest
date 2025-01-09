@@ -54,5 +54,7 @@ ROW-COLS: splitting screen into rows and cols and adjusting elements size; boots
  Step 1: adding "novalidate" if form tag. second, adding class="needs-validation" in form tag. third, adding js code(in bootdtrap website) in public/js/script.js file and mentioning it in boilerplate.ejs.
 
 [19] 02. Success and Failure text (displaying message with validation in form) in both new.ejs and edit.ejs.
- 
+ but there is still vulnerability in our verification as we can't send data via form, if we send data via hoppscotch or API directly then invalid data get stored in database so we need to use server side validation.
+
+ [20] 03. Custom error Hnadling. adding middleware in app.js to handle error while adding new data to database.
  -->
