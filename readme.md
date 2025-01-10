@@ -59,4 +59,5 @@ ROW-COLS: splitting screen into rows and cols and adjusting elements size; boots
  [20] 03. Custom error Hnadling. adding middleware in app.js to handle error while adding new data to database.
 
  [21] 04. Adding wrapAsync /utils/wrapAsync.js. making use of wrapAsync in place of try-catch block done in above (create route). 
+ [22] 05. Adding ExpressError /util/ExpressError.js. defining custom error name and status. defining middleware for wild card route, adding server sd\ide validations for delete route, edit route etc..
  -->

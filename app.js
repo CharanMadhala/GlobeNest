@@ -8,6 +8,7 @@ const path = require("path");
 const methodOverride = require("method-override");
 const ejsMate = require("ejs-mate");
 const wrapAsync = require("./utils/wrapAsync.js");
+const ExpressError = require("./utils/wrapAsync.js");
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
@@ -45,7 +46,9 @@ app.get("/listings/new", (req, res)=>{
 //[7]Create Route
 //error handling is also done here, if we insert any invalid data to mongodb then we will get error.
 app.post("/listings", wrapAsync(async (req, res, next)=>{
-    
+        if(!req.body.listing){
+            throw new ExpressError(400, "Send valid data for listings");
+        }
         // console.log(req.body);
         const listing = new Listing(req.body);
         await listing.save();
@@ -83,22 +86,29 @@ app.get("/listings/:id/edit", async (req, res)=>{
 
 });
 //[8] Update Route -- update listing
-app.put("/listings/:id", async (req, res)=>{
+app.put("/listings/:id", wrapAsync(async (req, res)=>{
+    if(!req.body.listing){
+        throw new ExpressError(400, "Send valid data for listings");
+    }
     let { id } = req.params;
     // console.log(req.body);
     await Listing.findByIdAndUpdate(id, {...req.body});
     res.redirect(`/listings/${ id }`);
+}));
+
+
+app.all("*", (req, res, next) => {
+    next(new ExpressError(404, "Page Not Found!"));
 });
-
-
-
-
-
 
 // middleware to hande custom error
 app.use((err, req, res, next) => {
-    res.send("something went wrong!");
+    let {statusCode = 500, message = "Something went wrong!" } = err;
+    res.status(statusCode).send(message);
+    // res.send("something went wrong!");
 });
+
+
 // app.get("/test/listing", async (req, res)=>{
 //     let sampleListing = new Listing({
 //         title: "My new Villa",
