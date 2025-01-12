@@ -60,4 +60,6 @@ ROW-COLS: splitting screen into rows and cols and adjusting elements size; boots
 
  [21] 04. Adding wrapAsync /utils/wrapAsync.js. making use of wrapAsync in place of try-catch block done in above (create route). 
  [22] 05. Adding ExpressError /util/ExpressError.js. defining custom error name and status. defining middleware for wild card route, adding server sd\ide validations for delete route, edit route etc..
- -->
+[23] 06. views/listings/error.ejs - displaying error message using bootstrap "alerts. 
+
+ --> 
