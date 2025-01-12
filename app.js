@@ -8,7 +8,7 @@ const path = require("path");
 const methodOverride = require("method-override");
 const ejsMate = require("ejs-mate");
 const wrapAsync = require("./utils/wrapAsync.js");
-const ExpressError = require("./utils/wrapAsync.js");
+const ExpressError = require("./utils/ExpressError.js");
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
@@ -33,10 +33,10 @@ app.get("/", (req, res)=>{
 });
 
 //Index Route - to display all Listings
-app.get("/listings", async (req, res)=>{
+app.get("/listings", wrapAsync(async (req, res)=>{
     const allListings = await Listing.find({});
     res.render("\listings/index.ejs", {allListings});
-});
+}));
 
 //[7]New Route
 app.get("/listings/new", (req, res)=>{
@@ -46,7 +46,7 @@ app.get("/listings/new", (req, res)=>{
 //[7]Create Route
 //error handling is also done here, if we insert any invalid data to mongodb then we will get error.
 app.post("/listings", wrapAsync(async (req, res, next)=>{
-        if(!req.body.listing){
+        if(!req.body){
             throw new ExpressError(400, "Send valid data for listings");
         }
         // console.log(req.body);
@@ -61,34 +61,35 @@ app.post("/listings", wrapAsync(async (req, res, next)=>{
 }));
 
 //[9] - Delete Route
-app.delete("/listings/:id", async (req, res)=>{
+app.delete("/listings/:id", wrapAsync(async (req, res)=>{
     let { id } = req.params;
     const deletedListing = await Listing.findByIdAndDelete(id);
     console.log(deletedListing);
     res.redirect("/listings");
-});
+}));
 
 //Show Route - to diaplay all Listings
-app.get("/listings/:id", async (req, res)=>{
+app.get("/listings/:id", wrapAsync(async (req, res)=>{
     const { id } = req.params;
     const listing = await Listing.findById(id);
     // console.log(list);
     res.render("\listings/show.ejs", { listing });
     // console.log(req.params);
     // res.send(`get request to ${id}`);
-});
+}));
 
 //[8] Edit Route -- form edit
-app.get("/listings/:id/edit", async (req, res)=>{
+app.get("/listings/:id/edit", wrapAsync(async (req, res)=>{
     let { id } = req.params;
     const listing = await Listing.findById(id);
     res.render("\listings/edit.ejs", { listing });
 
-});
+}));
+
 //[8] Update Route -- update listing
 app.put("/listings/:id", wrapAsync(async (req, res)=>{
-    if(!req.body.listing){
-        throw new ExpressError(400, "Send valid data for listings");
+    if(!req.body){
+        throw new ExpressError(400, "Send valid data for listing");
     }
     let { id } = req.params;
     // console.log(req.body);
