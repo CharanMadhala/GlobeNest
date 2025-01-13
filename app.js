@@ -9,6 +9,8 @@ const methodOverride = require("method-override");
 const ejsMate = require("ejs-mate");
 const wrapAsync = require("./utils/wrapAsync.js");
 const ExpressError = require("./utils/ExpressError.js");
+const {listingSchema} = require("./schema.js");
+const { error } = require("console");
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
@@ -46,12 +48,17 @@ app.get("/listings/new", (req, res)=>{
 //[7]Create Route
 //error handling is also done here, if we insert any invalid data to mongodb then we will get error.
 app.post("/listings", wrapAsync(async (req, res, next)=>{
-        if(!req.body){
-            throw new ExpressError(400, "Send valid data for listings");
+        // if(!req.body.listing){
+        //     throw new ExpressError(400, "Send valid data for listings");
+        // }
+        let result = listingSchema.validate(req.body);
+        console.log(result);
+        if(result.error){
+            throw new ExpressError(400, result.error);
         }
         // console.log(req.body);
-        const listing = new Listing(req.body);
-        await listing.save();
+        const newListing = new Listing(req.body.listing);
+        await newListing.save();
         // console.log(req.body);
         res.redirect("/listings");
         // const listing = res.body;
@@ -88,19 +95,17 @@ app.get("/listings/:id/edit", wrapAsync(async (req, res)=>{
 
 //[8] Update Route -- update listing
 app.put("/listings/:id", wrapAsync(async (req, res)=>{
-    if(!req.body){
+    if(!req.body.listing){
         throw new ExpressError(400, "Send valid data for listing");
     }
     let { id } = req.params;
     // console.log(req.body);
-    await Listing.findByIdAndUpdate(id, {...req.body});
+    await Listing.findByIdAndUpdate(id, {...req.body.listing});
     res.redirect(`/listings/${ id }`);
 }));
 
 
-app.all("*", (req, res, next) => {
-    next(new ExpressError(404, "Page Not Found!"));
-});
+
 
 // middleware to hande custom error
 app.use((err, req, res, next) => {
@@ -110,6 +115,9 @@ app.use((err, req, res, next) => {
     // res.send("something went wrong!");
 });
 
+app.all("*", (req, res, next) => {
+    next(new ExpressError(404, "Page Not Found!"));
+});
 
 // app.get("/test/listing", async (req, res)=>{
 //     let sampleListing = new Listing({

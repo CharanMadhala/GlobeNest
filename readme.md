@@ -56,12 +56,12 @@ ROW-COLS: splitting screen into rows and cols and adjusting elements size; boots
 [19] 02. Success and Failure text (displaying message with validation in form) in both new.ejs and edit.ejs.
  but there is still vulnerability in our verification as we can't send data via form, if we send data via hoppscotch or API directly then invalid data get stored in database so we need to use server side validation.
 
- [20] 03. Custom error Hnadling. adding middleware in app.js to handle error while adding new data to database.
+ [20] 03. Custom error Handling. adding middleware in app.js to handle error while adding new data to database.
 
  [21] 04. Adding wrapAsync /utils/wrapAsync.js. making use of wrapAsync in place of try-catch block done in above (create route). 
  [22] 05. Adding ExpressError /util/ExpressError.js. defining custom error name and status. defining middleware for wild card route, adding server sd\ide validations for delete route, edit route etc..
-[23] 06. views/listings/error.ejs - displaying error message using bootstrap "alerts. 
-
+[23] 06. views/listings/error.ejs - displaying error message using bootstrap "alerts". 
+[24] 07. Validation for Schema (Server side error handling (verify empty object data i.e., applying validation for individual fields)) and using npm i joi. using "joi" npm package formschema verification (sends error if the inout fields are empty while submitting form). defining new file ./schema.js for defining joi schema for verification.
 
  --> 
 
