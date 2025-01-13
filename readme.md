@@ -62,6 +62,6 @@ ROW-COLS: splitting screen into rows and cols and adjusting elements size; boots
  [22] 05. Adding ExpressError /util/ExpressError.js. defining custom error name and status. defining middleware for wild card route, adding server sd\ide validations for delete route, edit route etc..
 [23] 06. views/listings/error.ejs - displaying error message using bootstrap "alerts". 
 [24] 07. Validation for Schema (Server side error handling (verify empty object data i.e., applying validation for individual fields)) and using npm i joi. using "joi" npm package formschema verification (sends error if the inout fields are empty while submitting form). defining new file ./schema.js for defining joi schema for verification.
-
+[25] 08. Validation for Schema (using Middleware). all the above code is put in function and used as a middleware for create and update route and making use of addition "details" sent in error.
  --> 
 
