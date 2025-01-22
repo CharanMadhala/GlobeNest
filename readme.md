@@ -67,5 +67,4 @@ ROW-COLS: splitting screen into rows and cols and adjusting elements size; boots
  --> 
 
 <!-- 52. Database Relationships
-[26] 
  -->
