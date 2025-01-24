@@ -66,5 +66,7 @@ ROW-COLS: splitting screen into rows and cols and adjusting elements size; boots
 [25] 08. Validation for Schema (using Middleware). all the above code is put in function and used as a middleware for create and update route and making use of addition "details" sent in error.
  --> 
 
-<!-- 52. Database Relationships
+<!-- 52. Database Relationships - learning relationships in MongoDB (how to connect two tables)
  -->
+ <!-- 53.  Project - phase 2 (Part A)
+    [26] 03. -->
