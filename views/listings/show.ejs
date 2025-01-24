@@ -3,11 +3,11 @@
 <body>
     <div class="row">
         <div class="col-6 offset-3">
-            <h2>Listing Details</h2>
+            <h2><%= listing.title %></h2>
             <div class="card show-card">
                 <img src="<%= listing.image.url %>" class="card-img-top" alt="<%= listing.title %>">
                 <div class="card-body">
-                  <h5 class="card-title"><b><%= listing.title %> </b></h5>
+                  
                   <p class="card-text"><%= listing.description %>
                     <br>
                     &#8377; <%= listing.price.toLocaleString("en-IN") %> / night <br>
