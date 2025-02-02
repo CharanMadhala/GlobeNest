@@ -71,4 +71,7 @@ ROW-COLS: splitting screen into rows and cols and adjusting elements size; boots
  <!-- 53.  Project - phase 2 (Part A)
     [26] 03. models/reviews.js -- created new reviews model(for storing comment-String, rating(1 to 5)-Number, createdAt-date and time) for storing reviews of all listings. and Added "reviews" field in listings model, which stores ObjectIDs of reviews.
 
+    [27] 04. creating form for taking reviews in show.ejs .. just form, post request is not implemented
+    
+
 -->
