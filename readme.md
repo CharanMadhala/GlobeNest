@@ -87,3 +87,9 @@ ROW-COLS: splitting screen into rows and cols and adjusting elements size; boots
 
 -->
 
+<!-- 54. Project - Phase 2 (part b) 
+  [34] 01. Learning about "Express Router", Resturcturing (We do in Major projects). Creating a new folder "routes" in main directory. from app.js we cut and paste all the /listings/ routes to routes/listing.js and Middlewares it used. copy past all the required packages. In /routes/listings.js : replacing all app with router ex: replacing app.get with router.get. and we are removing /listings/ in all routes.
+  In app.js, replacing all that listing code with app.use("/listings", listings);
+
+
+-->
