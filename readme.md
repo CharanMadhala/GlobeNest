@@ -72,7 +72,8 @@ ROW-COLS: splitting screen into rows and cols and adjusting elements size; boots
     [26] 03. models/reviews.js -- created new reviews model(for storing comment-String, rating(1 to 5)-Number, createdAt-date and time) for storing reviews of all listings. and Added "reviews" field in listings model, which stores ObjectIDs of reviews.
 
     [27] 04. creating form for taking reviews in show.ejs .. just form, post request is not implemented
-    [28] 05. submitting revies form - post request - POST /listings/:id/reviews - getting review object, storing it in reviews and pushing in listings.reviews array.
-    
+    [28] 05. submitting reviews form - post request - POST /listings/:id/reviews - getting review object, storing it in reviews and pushing in listings.reviews array.
+
+    [29] 06. Client ans Server Side validation for Reviews - client(Form validation - making input fields required) - server side(Joi validation - creating schem in schema.js -> requiring in app.js, creating a function and using it as middleware in /listings/:id/reviews. also using wrapAsync() for error handling).
 
 -->
