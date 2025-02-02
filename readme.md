@@ -10,7 +10,7 @@
     <!-- <li></li> -->
 </ul>
 
-<!-- 47. Phase 1 (part a) - CRUD operations
+<!-- 47. Phase 1 (part a) - CRUD operations - [1] to [9]
 [1] basic setup -- installing express, ejs, mongoose. 
     index.js -- require express, initialize app, lister to port for requests, setup up home root "/" to verify working.
     require mongoose, setup connection.
@@ -30,7 +30,7 @@ initialise database, data link: https://github.com/apna-college/wanderlust/blob/
 
  -->
 
- <!-- 48. Phase 1 (Part b) - Apply Styling 
+ <!-- 48. Phase 1 (Part b) - Apply Styling - [10] to [17]
 [10] 01. Creating Boilerplate -- making use of EJS Mate (npm i ejs-mate, const ejsMate = require("ejs-mate"), app.engine('ejs', ejsMate)) to enhanced templating. common templatings in many pages can be put into views/layouts folder (here we have boilerplate.ejs) and import in ejs files ex: like Navbar, Footer etc..
  And Creting public folder. May contain css files,js files,images.
 
@@ -50,7 +50,7 @@ ROW-COLS: splitting screen into rows and cols and adjusting elements size; boots
 [17] 50, 51 folders - Learnt Middlewares and Error Handling.
  -->
 
- <!-- 51. Project - Phase 1(Part c) 
+ <!-- 51. Project - Phase 1(Part c) - [18] to [25]
  [18] 01. Client-Side Form Validation - using Bootstrap form validations and disabling browsers default validation.
  Step 1: adding "novalidate" if form tag. second, adding class="needs-validation" in form tag. third, adding js code(in bootdtrap website) in public/js/script.js file and mentioning it in boilerplate.ejs.
 
@@ -66,9 +66,10 @@ ROW-COLS: splitting screen into rows and cols and adjusting elements size; boots
 [25] 08. Validation for Schema (using Middleware). all the above code is put in function and used as a middleware for create and update route and making use of addition "details" sent in error.
  --> 
 
-<!-- 52. Database Relationships - learning relationships in MongoDB (how to connect two tables)
+<!-- 52. Database Relationships - learning relationships in MongoDB (how to connect two tables) - just learning
  -->
- <!-- 53.  Project - phase 2 (Part A)
+
+ <!-- 53.  Project - phase 2 (Part A) - [26] to [33]
     [26] 03. models/reviews.js -- created new reviews model(for storing comment-String, rating(1 to 5)-Number, createdAt-date and time) for storing reviews of all listings. and Added "reviews" field in listings model, which stores ObjectIDs of reviews.
 
     [27] 04. creating form for taking reviews in show.ejs .. just form, post request is not implemented
@@ -84,7 +85,5 @@ ROW-COLS: splitting screen into rows and cols and adjusting elements size; boots
         "" The $pull operator removes from an existing array all instances of a value or values that match a specified condition. ""
     [33] 10. Handling Delete Listing - Creating delete Middleware for reviews /models/listing/js - after execution of delete route in [32] step it automatically executes this middleware which deletes all reviews associated with this listing in Reviews Collection/model
 
-    
-    
-
 -->
+
