@@ -76,4 +76,7 @@ ROW-COLS: splitting screen into rows and cols and adjusting elements size; boots
 
     [29] 06. Client ans Server Side validation for Reviews - client(Form validation - making input fields required) - server side(Joi validation - creating schem in schema.js -> requiring in app.js, creating a function and using it as middleware in /listings/:id/reviews. also using wrapAsync() for error handling).
 
+    [30] 07. Render Reviews - displaying all review of each listing in show.ejs ... making use of .populate("reviews") in show route(app.js) .. without styling
+
+    
 -->

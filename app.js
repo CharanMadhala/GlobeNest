@@ -100,7 +100,7 @@ app.delete("/listings/:id", wrapAsync(async (req, res)=>{
 //Show Route - to diaplay all Listings
 app.get("/listings/:id", wrapAsync(async (req, res)=>{
     const { id } = req.params;
-    const listing = await Listing.findById(id);
+    const listing = await Listing.findById(id).populate("reviews");
     // console.log(list);
     res.render("\listings/show.ejs", { listing });
     // console.log(req.params);
