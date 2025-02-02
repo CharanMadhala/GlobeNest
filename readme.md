@@ -78,5 +78,8 @@ ROW-COLS: splitting screen into rows and cols and adjusting elements size; boots
 
     [30] 07. Render Reviews - displaying all review of each listing in show.ejs ... making use of .populate("reviews") in show route(app.js) .. without styling
 
+    [31] 08. Add Styling to Reviews in show.ejs
     
+    
+
 -->

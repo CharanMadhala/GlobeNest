@@ -31,7 +31,7 @@ body {
 
 /* All listings (index page: index.ejs) */
 /* cards styling */
-.card {
+.listing-card {
     border: none;
     
     margin-bottom: 2rem;
