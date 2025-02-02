@@ -141,7 +141,16 @@ app.post("/listings/:id/reviews", validateReview, wrapAsync(async(req, res)=>{
     // res.send("new review saved");
 
 }))
+// Reviews
+// DELETE Route- [32]
+app.delete("/listings/:id/reviews/:reviewId", wrapAsync(async(req, res)=>{
+    let { id, reviewId } = req.params;
+    // mongoose $pull operator - used for removing deleted objectId from listings.reviews[] array
+    await Listing.findByIdAndUpdate(id, {$pull: {reviews: reviewId }});
+    await Review.findByIdAndDelete(reviewId);
 
+    res.redirect(`/listings/${id}`);
+}))
 
 // middleware to hande custom error
 app.use((err, req, res, next) => {

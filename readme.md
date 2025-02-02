@@ -79,7 +79,12 @@ ROW-COLS: splitting screen into rows and cols and adjusting elements size; boots
     [30] 07. Render Reviews - displaying all review of each listing in show.ejs ... making use of .populate("reviews") in show route(app.js) .. without styling
 
     [31] 08. Add Styling to Reviews in show.ejs
-    
+    [32] 09. Delete button for reviews - show.ejs - DELETE ROUTE - /listings/:id/reviews/:reviewId
+        Making use of Mongo $pull Operator (for deleting reivew ObjectID() from listing.reviews array).
+        "" The $pull operator removes from an existing array all instances of a value or values that match a specified condition. ""
+   
+
+
     
 
 -->
