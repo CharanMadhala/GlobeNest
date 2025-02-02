@@ -82,9 +82,9 @@ ROW-COLS: splitting screen into rows and cols and adjusting elements size; boots
     [32] 09. Delete button for reviews - show.ejs - DELETE ROUTE - /listings/:id/reviews/:reviewId
         Making use of Mongo $pull Operator (for deleting reivew ObjectID() from listing.reviews array).
         "" The $pull operator removes from an existing array all instances of a value or values that match a specified condition. ""
-   
+    [33] 10. Handling Delete Listing - Creating delete Middleware for reviews /models/listing/js - after execution of delete route in [32] step it automatically executes this middleware which deletes all reviews associated with this listing in Reviews Collection/model
 
-
+    
     
 
 -->
