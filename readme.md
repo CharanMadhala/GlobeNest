@@ -88,6 +88,8 @@ ROW-COLS: splitting screen into rows and cols and adjusting elements size; boots
 -->
 
 <!-- 54. Project - Phase 2 (part b) 
+    01, 02 are basics of express router
+
   [34] 03. Learning about "Express Router", Restructuring (We do in Major projects). Creating a new folder "routes" in main directory. from app.js we cut and paste all the /listings/ routes to routes/listing.js and Middlewares it used. copy past all the required packages. In /routes/listings.js : replacing all app with router ex: replacing app.get with router.get. and we are removing /listings/ in all routes.
   In app.js, replacing all that listing code with app.use("/listings", listings);
 
@@ -104,6 +106,7 @@ ROW-COLS: splitting screen into rows and cols and adjusting elements size; boots
 
     reference: expressjs.com/en/4x/api.html#express.router
 
+    05 to 08 - About Web cookies (we use them to store some info from server to browser and after that, that information can be shared by all other pages). Mostly used for Authentication and Authirization. 
     
 
 
