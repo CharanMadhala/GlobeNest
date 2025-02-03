@@ -88,10 +88,10 @@ ROW-COLS: splitting screen into rows and cols and adjusting elements size; boots
 -->
 
 <!-- 54. Project - Phase 2 (part b) 
-  [34] 01. Learning about "Express Router", Restructuring (We do in Major projects). Creating a new folder "routes" in main directory. from app.js we cut and paste all the /listings/ routes to routes/listing.js and Middlewares it used. copy past all the required packages. In /routes/listings.js : replacing all app with router ex: replacing app.get with router.get. and we are removing /listings/ in all routes.
+  [34] 03. Learning about "Express Router", Restructuring (We do in Major projects). Creating a new folder "routes" in main directory. from app.js we cut and paste all the /listings/ routes to routes/listing.js and Middlewares it used. copy past all the required packages. In /routes/listings.js : replacing all app with router ex: replacing app.get with router.get. and we are removing /listings/ in all routes.
   In app.js, replacing all that listing code with app.use("/listings", listings);
 
-  [35] 02. Likewise, we are doing restructuring for Reviews routes and new concept MERGE PARAMS (while giving reviews after replacing all the code, it will not work because the ID in the route is not reaching /routes/review.js. so while requiring Router({mergeParams: true}) in review.js).
+  [35] 04. Likewise, we are doing restructuring for Reviews routes and new concept MERGE PARAMS (while giving reviews after replacing all the code, it will not work because the ID in the route is not reaching /routes/review.js. so while requiring Router({mergeParams: true}) in review.js).
   i.e., removing all the code that belongs to reviews route from app.js to /routes/review.js
 
   and new concept: Merge Params
