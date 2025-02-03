@@ -3,17 +3,18 @@ const app = express();
 const port = 8080;
 const mongoose = require("mongoose");
 const MONGO_URL = "mongodb://127.0.0.1:27017/wanderlust";
-const Listing = require("./models/listing.js");
+// const Listing = require("./models/listing.js");
 const path = require("path");
 const methodOverride = require("method-override");
 const ejsMate = require("ejs-mate");
-const wrapAsync = require("./utils/wrapAsync.js");
+// const wrapAsync = require("./utils/wrapAsync.js");
 const ExpressError = require("./utils/ExpressError.js");
-const {listingSchema, reviewSchema} = require("./schema.js");
-const { error } = require("console");
-const Review = require("./models/review.js");
+// const {listingSchema, reviewSchema} = require("./schema.js");
+// const { error } = require("console");
+// const Review = require("./models/review.js");
 
 const listings = require("./routes/listing.js");
+const reviews = require("./routes/review.js");
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
@@ -37,48 +38,11 @@ app.get("/", (req, res)=>{
     res.send("I am root");
 });
 
-const validateReview = (req, res, next) => {
-    let {error} = reviewSchema.validate(req.body);
-    if(error){
-        // throw new ExpressError(400, error);
-        let errMsg = error.details.map((el)=> el.message).join(",");
-        throw new ExpressError(400, errMsg);
-    }else{
-        next();
-    }
-};
-
 // refers to all the /listings routes , migrated to /routes/listing.js for Express Router propose
 // [34]
 app.use("/listings", listings);
-
-// Reviews
-// POST Route- [28]
-app.post("/listings/:id/reviews", validateReview, wrapAsync(async(req, res)=>{
-    let listing = await Listing.findById(req.params.id);
-    let newReview = new Review(req.body.review);
-
-    listing.reviews.push(newReview);
-
-    await newReview.save();
-    await listing.save();
-
-    res.redirect(`/listings/${listing._id}`);
-
-    // console.log("new review saved");
-    // res.send("new review saved");
-
-}))
-// Reviews
-// DELETE Route- [32]
-app.delete("/listings/:id/reviews/:reviewId", wrapAsync(async(req, res)=>{
-    let { id, reviewId } = req.params;
-    // mongoose $pull operator - used for removing deleted objectId from listings.reviews[] array
-    await Listing.findByIdAndUpdate(id, {$pull: {reviews: reviewId }});
-    await Review.findByIdAndDelete(reviewId);
-
-    res.redirect(`/listings/${id}`);
-}))
+// like =wise, restructuring - Reviews
+app.use("/listings/:id/reviews", reviews);
 
 // middleware to hande custom error
 app.use((err, req, res, next) => {
