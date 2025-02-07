@@ -87,7 +87,7 @@ ROW-COLS: splitting screen into rows and cols and adjusting elements size; boots
 
 -->
 
-<!-- 54. Project - Phase 2 (part b) 
+<!-- 54. Project - Phase 2 (part b) [34] and [35]
     01, 02 are basics of express router
 
   [34] 03. Learning about "Express Router", Restructuring (We do in Major projects). Creating a new folder "routes" in main directory. from app.js we cut and paste all the /listings/ routes to routes/listing.js and Middlewares it used. copy past all the required packages. In /routes/listings.js : replacing all app with router ex: replacing app.get with router.get. and we are removing /listings/ in all routes.
@@ -108,7 +108,11 @@ ROW-COLS: splitting screen into rows and cols and adjusting elements size; boots
 
     05 to 08 - About Web cookies (we use them to store some info from server to browser and after that, that information can be shared by all other pages). Mostly used for Authentication and Authirization. 
     
-
-
-
 -->
+
+<!-- 55. Project - phase 2 (part c) 
+    01. Intro about session, stateful and stateless protocols. 
+    02. Intro about express sessions, using session as middleware
+    03. Exploring session options, like resave , saveUninitialized. Keeping track of no of requests received in a session.
+    
+ -->
