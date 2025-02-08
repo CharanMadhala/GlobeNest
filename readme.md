@@ -115,4 +115,9 @@ ROW-COLS: splitting screen into rows and cols and adjusting elements size; boots
     02. Intro about express sessions, using session as middleware
     03. Exploring session options, like resave , saveUninitialized. Keeping track of no of requests received in a session.
     
+    04. Storing and using session info, creating temporary varible in session to store username and display it in different pages
+    05. using connect-flash npm package, for displaying temporary messages. like, user registered, new listing added, listing deleted etc.. (Can also be done through alerts)
+    06. using res.locals, while rendering view we can use res.locals to store temporary data and without passing it, we can directly access it in view (we used it to store flash messages)
+
+    
  -->
