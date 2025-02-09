@@ -119,5 +119,7 @@ ROW-COLS: splitting screen into rows and cols and adjusting elements size; boots
     05. using connect-flash npm package, for displaying temporary messages. like, user registered, new listing added, listing deleted etc.. (Can also be done through alerts)
     06. using res.locals, while rendering view we can use res.locals to store temporary data and without passing it, we can directly access it in view (we used it to store flash messages)
 
-    
+    [36] 07. Implementing sessions in project (npm i express-session)- requiring session and setting up middleware. verify for sessionId(inspect->applications->cookies->localhost->connect.sid) cookie in browser.
+
+
  -->

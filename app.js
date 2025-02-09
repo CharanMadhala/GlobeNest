@@ -9,6 +9,7 @@ const methodOverride = require("method-override");
 const ejsMate = require("ejs-mate");
 // const wrapAsync = require("./utils/wrapAsync.js");
 const ExpressError = require("./utils/ExpressError.js");
+const session = require("express-session");
 // const {listingSchema, reviewSchema} = require("./schema.js");
 // const { error } = require("console");
 // const Review = require("./models/review.js");
@@ -33,6 +34,14 @@ main().then(()=>{
 async function main(){
     await mongoose.connect(MONGO_URL);
 }
+
+const sessionOptions = {
+    secret: "mysupersecretcode",
+    resave: false,
+    saveUninitialized: true
+};
+
+app.use(session(sessionOptions));
 
 app.get("/", (req, res)=>{
     res.send("I am root");
