@@ -10,6 +10,7 @@ const ejsMate = require("ejs-mate");
 // const wrapAsync = require("./utils/wrapAsync.js");
 const ExpressError = require("./utils/ExpressError.js");
 const session = require("express-session");
+const flash = require("connect-flash");
 // const {listingSchema, reviewSchema} = require("./schema.js");
 // const { error } = require("console");
 // const Review = require("./models/review.js");
@@ -48,11 +49,18 @@ const sessionOptions = {
     
 };
 
-app.use(session(sessionOptions));
-
 app.get("/", (req, res)=>{
     res.send("I am root");
 });
+
+app.use(session(sessionOptions));
+app.use(flash());
+
+app.use((req,res, next)=>{
+    res.locals.success = req.flash("success");
+    next();
+});
+
 
 // refers to all the /listings routes , migrated to /routes/listing.js for Express Router propose
 // [34]
