@@ -110,7 +110,7 @@ ROW-COLS: splitting screen into rows and cols and adjusting elements size; boots
     
 -->
 
-<!-- 55. Project - phase 2 (part c) 
+<!-- 55. Project - phase 2 (part c) [36] to [40]
     01. Intro about session, stateful and stateless protocols. 
     02. Intro about express sessions, using session as middleware
     03. Exploring session options, like resave , saveUninitialized. Keeping track of no of requests received in a session.
@@ -123,9 +123,10 @@ ROW-COLS: splitting screen into rows and cols and adjusting elements size; boots
     [37] 08. setting cookie in sessionOnptions - used to set expiry date for session cookie ex: 7 Days means in same browser we don't have to login everytime for next 7 days. and setting httpOnly to true to prevent from crossSite attacks.
 
     [38] 09. Implementing Flash Message - message that new listing is created is displayed in /listing (index.ejs).
-    [39] 10 . implementing Success partials - displaying succes falsh message when we add new listing, edit listing, delete listing,  add new review, delete review.
+    [39] 10. Implementing Success partials - displaying succes flash message when we add new listing, edit listing, delete listing,  add new review, delete review.
     (shifiting displaying of flash message to boiler plate)
-
-
+    [40] 11. Implementing Failure partials - displaying failur flash message. for example: if we are trying to access listing that do not exist or edit listing that do not exist.
 
  -->
+
+ <!-- 56.  -->
