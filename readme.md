@@ -120,6 +120,9 @@ ROW-COLS: splitting screen into rows and cols and adjusting elements size; boots
     06. using res.locals, while rendering view we can use res.locals to store temporary data and without passing it, we can directly access it in view (we used it to store flash messages)
 
     [36] 07. Implementing sessions in project (npm i express-session)- requiring session and setting up middleware. verify for sessionId(inspect->applications->cookies->localhost->connect.sid) cookie in browser.
+    [37] 08. setting cookie in sessionOnptions - used to set expiry date for session cookie ex: 7 Days means in same browser we don't have to login everytime for next 7 days. and setting httpOnly to true to prevent from crossSite attacks.
+
+
 
 
  -->
