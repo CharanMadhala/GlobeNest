@@ -123,8 +123,9 @@ ROW-COLS: splitting screen into rows and cols and adjusting elements size; boots
     [37] 08. setting cookie in sessionOnptions - used to set expiry date for session cookie ex: 7 Days means in same browser we don't have to login everytime for next 7 days. and setting httpOnly to true to prevent from crossSite attacks.
 
     [38] 09. Implementing Flash Message - message that new listing is created is displayed in /listing (index.ejs).
+    [39] 10 . implementing Success partials - displaying succes falsh message when we add new listing, edit listing, delete listing,  add new review, delete review.
+    (shifiting displaying of flash message to boiler plate)
 
-    
 
 
  -->

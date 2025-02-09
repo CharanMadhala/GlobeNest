@@ -26,7 +26,7 @@ router.post("/", validateReview, wrapAsync(async(req, res)=>{
 
     await newReview.save();
     await listing.save();
-
+    req.flash("success", "Review Posted!");
     res.redirect(`/listings/${listing._id}`);
 
     // console.log("new review saved");
@@ -40,7 +40,7 @@ router.delete("/:reviewId", wrapAsync(async(req, res)=>{
     // mongoose $pull operator - used for removing deleted objectId from listings.reviews[] array
     await Listing.findByIdAndUpdate(id, {$pull: {reviews: reviewId }});
     await Review.findByIdAndDelete(reviewId);
-
+    req.flash("success", "Review Deleted!");
     res.redirect(`/listings/${id}`);
 }))
 
