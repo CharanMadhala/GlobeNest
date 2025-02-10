@@ -129,4 +129,6 @@ ROW-COLS: splitting screen into rows and cols and adjusting elements size; boots
 
  -->
 
- <!-- 56.  -->
+ <!-- 56. Project - phase 2 (Part d)
+    
+ -->
