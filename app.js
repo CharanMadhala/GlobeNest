@@ -72,6 +72,15 @@ app.use((req,res, next)=>{
     next();
 });
 
+app.get("/demouser", async(req, res)=>{
+    let fakeuser = new User({
+        email: "student@gmail.com",
+        username: "charan2004",
+    });
+
+    let registeredUser = await User.register(fakeuser, "helloworld"); //helloworld is password
+    res.send(registeredUser);
+});
 
 // refers to all the /listings routes , migrated to /routes/listing.js for Express Router propose
 // [34]

@@ -11,6 +11,6 @@ const userSchema = new Schema({
 
 
 // automatically creates hashed, salted username and password fields
-User.plugin(passportLocalMongoose);
+userSchema.plugin(passportLocalMongoose);
 
 module.exports = mongoose.model("User", userSchema);

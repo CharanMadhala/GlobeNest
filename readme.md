@@ -133,6 +133,7 @@ ROW-COLS: splitting screen into rows and cols and adjusting elements size; boots
     01 to 05 learned babsic about Authentication, Authorization, Password storing (hashing and Salting), passport package for authentication
     [41] 06. User Model (models/user.js) - creating user model using passport package
     [42] 07. Configuring passport-local before using in app.js
+    [43] 08. Demo user - new route for testing woriking of passport, for testing how details are stored.
     
 
  -->
