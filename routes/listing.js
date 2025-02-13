@@ -4,6 +4,7 @@ const Listing = require("../models/listing.js");
 const wrapAsync = require("../utils/wrapAsync.js");
 const ExpressError = require("../utils/ExpressError.js");
 const {listingSchema} = require("../schema.js");
+const {isLoggedIn} = require("../middleware.js");
 
 //Index Route - to display all Listings
 router.get(
@@ -15,7 +16,7 @@ router.get(
 );
 
 //[7]New Route
-router.get("/new", (req, res) => {
+router.get("/new", isLoggedIn, (req, res) => {
   res.render("listings/new.ejs");
 });
 
@@ -34,6 +35,7 @@ const validateListing = (req, res, next) => {
 //error handling is also done here, if we insert any invalid data to mongodb then we will get error.
 router.post(
   "/",
+  isLoggedIn,
   wrapAsync(async (req, res, next) => {
     // if(!req.body.listing){
     //     throw new ExpressError(400, "Send valid data for listings");
@@ -57,6 +59,7 @@ router.post(
 //[9] - Delete Route
 router.delete(
   "/:id",
+  isLoggedIn,
   wrapAsync(async (req, res) => {
     let { id } = req.params;
     const deletedListing = await Listing.findByIdAndDelete(id);
@@ -87,6 +90,7 @@ router.get(
 //[8] Edit Route -- form edit
 router.get(
   "/:id/edit",
+  isLoggedIn,
   wrapAsync(async (req, res) => {
     let { id } = req.params;
     const listing = await Listing.findById(id);
@@ -101,6 +105,7 @@ router.get(
 //[8] Update Route -- update listing
 router.put(
   "/:id",
+  isLoggedIn,
   validateListing,
   wrapAsync(async (req, res) => {
     let { id } = req.params;

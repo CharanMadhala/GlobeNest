@@ -142,3 +142,12 @@ ROW-COLS: splitting screen into rows and cols and adjusting elements size; boots
     password: sample
     email: sample@gmail.com
  -->
+
+<!-- 57. Major Project Phase - 2 (Part E) [47] 
+    [47] 01. Connecting Login Route - verify whether user is logged in or not using req.isAuthenticated() method (which verifies cookie(user) information) - checking whether user is logged in before creating, updating, deleting, editing listing.
+
+    we are aslo creating new file middleware.js, which contains code for verifing user is logged in or not.
+
+    
+ 
+-->
