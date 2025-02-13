@@ -18,8 +18,9 @@ const passport = require("passport");
 const LocalStrategy = require("passport-local");
 const User = require("./models/user.js");
 
-const listings = require("./routes/listing.js");
-const reviews = require("./routes/review.js");
+const listingRouter = require("./routes/listing.js");
+const reviewRouter = require("./routes/review.js");
+const userRouter = require("./routes/user.js");
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
@@ -84,9 +85,10 @@ app.get("/demouser", async(req, res)=>{
 
 // refers to all the /listings routes , migrated to /routes/listing.js for Express Router propose
 // [34]
-app.use("/listings", listings);
+app.use("/listings", listingRouter);
 // like =wise, restructuring - Reviews
-app.use("/listings/:id/reviews", reviews);
+app.use("/listings/:id/reviews", reviewRouter);
+app.use("/", userRouter);
 
 // middleware to hande custom error
 app.use((err, req, res, next) => {
