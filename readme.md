@@ -136,5 +136,9 @@ ROW-COLS: splitting screen into rows and cols and adjusting elements size; boots
     [43] 08. Demo user - new route for testing woriking of passport, for testing how details are stored.
     [44] 09. Creating SignUp GET route, form - /signup GET request - new route user.js and new view /users/signup.ejs
     [45] 10. Creating SignUp POST route, /signup POST request - routes/users.js
-    
+    [46] 11. Creating LogIn page - /login GET and POST requests - authenicates user using passport middleware
+    login crediantials for verification
+    username: sample
+    password: sample
+    email: sample@gmail.com
  -->
