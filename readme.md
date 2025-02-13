@@ -152,6 +152,8 @@ ROW-COLS: splitting screen into rows and cols and adjusting elements size; boots
 
     [49] 03. Adding sig up, log in, log out options in navbar - using req.user info of passport for rendering those options based on, whether user is logged in or not.
 
-    
+    [50] 04. Automatic Login after SignUp -changes in /signup POST route- using passport's req.login() method - which automatically logins with provided user details
+
+
  
 -->
