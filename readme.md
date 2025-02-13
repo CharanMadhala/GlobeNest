@@ -150,6 +150,8 @@ ROW-COLS: splitting screen into rows and cols and adjusting elements size; boots
 
     [48] 02. LogOut functionality - creating new route /logout in user.js - making use of req.logout() method of passport - which deletes user information from the session
 
+    [49] 03. Adding sig up, log in, log out options in navbar - using req.user info of passport for rendering those options based on, whether user is logged in or not.
+
     
  
 -->
