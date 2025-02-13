@@ -129,7 +129,7 @@ ROW-COLS: splitting screen into rows and cols and adjusting elements size; boots
 
  -->
 
- <!-- 56. Project - phase 2 (Part d)
+ <!-- 56. Project - phase 2 (Part d) [41] to [46]
     01 to 05 learned babsic about Authentication, Authorization, Password storing (hashing and Salting), passport package for authentication
     [41] 06. User Model (models/user.js) - creating user model using passport package
     [42] 07. Configuring passport-local before using in app.js
@@ -147,6 +147,8 @@ ROW-COLS: splitting screen into rows and cols and adjusting elements size; boots
     [47] 01. Connecting Login Route - verify whether user is logged in or not using req.isAuthenticated() method (which verifies cookie(user) information) - checking whether user is logged in before creating, updating, deleting, editing listing.
 
     we are aslo creating new file middleware.js, which contains code for verifing user is logged in or not.
+
+    [48] 02. LogOut functionality - creating new route /logout in user.js - making use of req.logout() method of passport - which deletes user information from the session
 
     
  
