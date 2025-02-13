@@ -134,7 +134,7 @@ ROW-COLS: splitting screen into rows and cols and adjusting elements size; boots
     [41] 06. User Model (models/user.js) - creating user model using passport package
     [42] 07. Configuring passport-local before using in app.js
     [43] 08. Demo user - new route for testing woriking of passport, for testing how details are stored.
-    [44] 09. Creating SignUp route, form - /signup GET request - new route user.js and new view /users/signup.ejs
+    [44] 09. Creating SignUp GET route, form - /signup GET request - new route user.js and new view /users/signup.ejs
+    [45] 10. Creating SignUp POST route, /signup POST request - routes/users.js
     
-
  -->
