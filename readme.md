@@ -158,6 +158,7 @@ ROW-COLS: splitting screen into rows and cols and adjusting elements size; boots
 
     [52] 06. Listing owner - For each listing we will associate owner, to implement authorization later (that only owner can edit or delete listing)
     
+    
 
  
 -->
