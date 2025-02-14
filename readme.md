@@ -185,6 +185,9 @@ ROW-COLS: splitting screen into rows and cols and adjusting elements size; boots
 
     [72] 07. Manipulating Form - changing form encoding type - using Multer (npm i multer)package - check notes
 
+    [73] 08. Cloud Setup - using cloudinary.com cloud service - stroing credentials in .env file (should not be shared)
+
+    
 
 
 
