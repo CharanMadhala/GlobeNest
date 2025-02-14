@@ -157,8 +157,12 @@ ROW-COLS: splitting screen into rows and cols and adjusting elements size; boots
     [51] 05. Post Login page - redirecting to previous page user requested before logging in. making use of req.originalUrl
 
     [52] 06. Listing owner - For each listing we will associate owner, to implement authorization later (that only owner can edit or delete listing)
+
     [53] 07. Starting with Authorization - protecting Edit/Delete router - from client-side -conditional rendering in show.ejs
-    [54] 
+
+    [54] 08. Starting with Authorization - protecting Edit/Delete router - from server-side - crating middlewares for checking onwer or not (isOwner) and using it in edit, update, delete listing routes - also converting validateListing and validateReview methods as middlewares
+    [55] 09. Authorization for Reviews - serverside and client-side validation for review - only person who logged in will be able to create reviews - also added author property in reviews schema
+
     
 
  

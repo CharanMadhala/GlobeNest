@@ -2,9 +2,8 @@ const express = require("express");
 const router = express.Router();
 const Listing = require("../models/listing.js");
 const wrapAsync = require("../utils/wrapAsync.js");
-const ExpressError = require("../utils/ExpressError.js");
-const {listingSchema} = require("../schema.js");
-const {isLoggedIn} = require("../middleware.js");
+
+const {isLoggedIn, isOwner, validateListing} = require("../middleware.js");
 
 //Index Route - to display all Listings
 router.get(
@@ -20,16 +19,7 @@ router.get("/new", isLoggedIn, (req, res) => {
   res.render("listings/new.ejs");
 });
 
-const validateListing = (req, res, next) => {
-  let { error } = listingSchema.validate(req.body);
-  if (error) {
-    // throw new ExpressError(400, error);
-    let errMsg = error.details.map((el) => el.message).join(",");
-    throw new ExpressError(400, errMsg);
-  } else {
-    next();
-  }
-};
+
 
 //[7]Create Route
 //error handling is also done here, if we insert any invalid data to mongodb then we will get error.
@@ -61,6 +51,7 @@ router.post(
 router.delete(
   "/:id",
   isLoggedIn,
+  isOwner,
   wrapAsync(async (req, res) => {
     let { id } = req.params;
     const deletedListing = await Listing.findByIdAndDelete(id);
@@ -92,6 +83,7 @@ router.get(
 router.get(
   "/:id/edit",
   isLoggedIn,
+  isOwner,
   wrapAsync(async (req, res) => {
     let { id } = req.params;
     const listing = await Listing.findById(id);
@@ -107,10 +99,11 @@ router.get(
 router.put(
   "/:id",
   isLoggedIn,
+  isOwner,
   validateListing,
   wrapAsync(async (req, res) => {
-    let { id } = req.params;
-    // console.log(req.body);
+    
+    let {id} = req.params;
     await Listing.findByIdAndUpdate(id, { ...req.body.listing });
     req.flash("success", "Listing Updated!");
     res.redirect(`/listings/${id}`);
