@@ -181,6 +181,11 @@ ROW-COLS: splitting screen into rows and cols and adjusting elements size; boots
 
     [71] 05. Re-Styling Ratings - uing Starability library - github: https://github.com/LunarLogic/starability
 
+    06. Introduction of how to take image file from user, how to store it.
+
+    [72] 07. Manipulating Form - changing form encoding type - using Multer (npm i multer)package - check notes
+
+
 
 
 
