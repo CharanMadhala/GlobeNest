@@ -168,8 +168,10 @@ ROW-COLS: splitting screen into rows and cols and adjusting elements size; boots
 
 -->
 
-<!-- 58.Major Project - Phase 3 (Part a) [57] to [] 
+<!-- 58.Major Project - Phase 3 (Part a) [57] to 
     [57] 01. MVC - Model,View, Controller - Model: contains db models, views: contains front-end part (views), controllers: contains all core functionality of backend (ex: all callback functions in routes) - creating new folder controllers and shifting callbacks in listings
+
+    [58] 02. Likewise, shifting all callbacks from listing to controllers
 
     
 -->
