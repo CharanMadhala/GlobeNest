@@ -175,8 +175,11 @@ ROW-COLS: splitting screen into rows and cols and adjusting elements size; boots
 
     [59] 03. Likewise, creating controllers for review  routes
 
-    [60] 04. Likewise, creating controller for user routes
+    [60] 03. Likewise, creating controller for user routes
 
+    [70] 04. Router.route() - used for more compact view of code in routes - modified routes/listing.js, /review.js and /user.js
+
+    
 
 
 -->
