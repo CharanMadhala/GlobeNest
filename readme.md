@@ -173,7 +173,9 @@ ROW-COLS: splitting screen into rows and cols and adjusting elements size; boots
 
     [58] 02. Likewise, shifting all callbacks from listing to controllers
 
-    [59] 03. Likewise, creating controllers for review  route
+    [59] 03. Likewise, creating controllers for review  routes
+
+    [60] 04. Likewise, creating controller for user routes
 
 
 
