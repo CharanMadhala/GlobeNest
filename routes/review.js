@@ -5,7 +5,7 @@ const wrapAsync = require("../utils/wrapAsync.js");
 const ExpressError = require("../utils/ExpressError.js");
 const {reviewSchema} = require("../schema.js");
 const Review = require("../models/review.js");
-const {validateReview, isLoggedIn} = require("../middleware.js");
+const {validateReview, isLoggedIn, isReviewAuthor} = require("../middleware.js");
 
 
 // POST Route- [28]
@@ -26,7 +26,7 @@ router.post("/",isLoggedIn, validateReview, wrapAsync(async(req, res)=>{
 }))
 // Reviews
 // DELETE Route- [32]
-router.delete("/:reviewId", wrapAsync(async(req, res)=>{
+router.delete("/:reviewId", isLoggedIn, isReviewAuthor, wrapAsync(async(req, res)=>{
     let { id, reviewId } = req.params;
     // mongoose $pull operator - used for removing deleted objectId from listings.reviews[] array
     await Listing.findByIdAndUpdate(id, {$pull: {reviews: reviewId }});

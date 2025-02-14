@@ -161,8 +161,12 @@ ROW-COLS: splitting screen into rows and cols and adjusting elements size; boots
     [53] 07. Starting with Authorization - protecting Edit/Delete router - from client-side -conditional rendering in show.ejs
 
     [54] 08. Starting with Authorization - protecting Edit/Delete router - from server-side - crating middlewares for checking onwer or not (isOwner) and using it in edit, update, delete listing routes - also converting validateListing and validateReview methods as middlewares
+
     [55] 09. Authorization for Reviews - serverside and client-side validation for review - only person who logged in will be able to create reviews - also added author property in reviews schema
 
+    [56] 10. Authorization for review deletion - only user who created can delete the review
+
+    
     
 
  
