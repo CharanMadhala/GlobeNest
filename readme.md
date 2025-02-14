@@ -179,7 +179,9 @@ ROW-COLS: splitting screen into rows and cols and adjusting elements size; boots
 
     [70] 04. Router.route() - used for more compact view of code in routes - modified routes/listing.js, /review.js and /user.js
 
-    
+    [71] 05. Re-Styling Ratings - uing Starability library - github: https://github.com/LunarLogic/starability
+
+
 
 
 -->
