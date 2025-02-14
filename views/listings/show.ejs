@@ -16,6 +16,7 @@
                 </div>
             </div>
         </div>
+        <% if(currUser && currUser._id.equals(listing.owner._id)) { %>
         <div class="offset-3 show-btns mb-4">
             
             <a href="/listings/<%= listing._id %>/edit" class="btn btn-primary edit-btn col-1">Edit</a>
@@ -25,6 +26,7 @@
                 <button class="btn btn-dark offset-5">Delete</button>
             </form>       
         </div>
+        <% } %>
         <div class="col-8 offset-3 mb-3">
             <hr>
             <h4>Leave a Review</h4>
