@@ -143,7 +143,7 @@ ROW-COLS: splitting screen into rows and cols and adjusting elements size; boots
     email: sample@gmail.com
  -->
 
-<!-- 57. Major Project Phase - 2 (Part E) [47] 
+<!-- 57. Major Project Phase - 2 (Part E) [47] to [56]
     [47] 01. Connecting Login Route - verify whether user is logged in or not using req.isAuthenticated() method (which verifies cookie(user) information) - checking whether user is logged in before creating, updating, deleting, editing listing.
 
     we are aslo creating new file middleware.js, which contains code for verifing user is logged in or not.
@@ -166,8 +166,10 @@ ROW-COLS: splitting screen into rows and cols and adjusting elements size; boots
 
     [56] 10. Authorization for review deletion - only user who created can delete the review
 
-    
-    
+-->
 
- 
+<!-- 58.Major Project - Phase 3 (Part a) [57] to [] 
+    [57] 01. MVC - Model,View, Controller - Model: contains db models, views: contains front-end part (views), controllers: contains all core functionality of backend (ex: all callback functions in routes) - creating new folder controllers and shifting callbacks in listings
+
+    
 -->
