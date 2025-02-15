@@ -191,6 +191,8 @@ ROW-COLS: splitting screen into rows and cols and adjusting elements size; boots
 
     [75] 10. Update Listing Schema - to store url and filename - previously in course we used to store image as string, now we have to add url and filename in image, in Listing schema - but I have done correct from starting - and update createLisiting call back in controllers to store actual listing url and filename returned by controller
 
+    [76] 11. Display image in index and show roues - which i have already done from begining
+
     
 
 
