@@ -189,6 +189,8 @@ ROW-COLS: splitting screen into rows and cols and adjusting elements size; boots
 
     [74] 09. Store Files - using packages (npm i cloudinary multer-storage-cloudinary) - new file cloudConfig.js - basically implementing functionality where uploaded image will get parsed using multer. code will open cloudinary and upload image, it will return object in which we have image path
 
+    [75] 10. Update Listing Schema - to store url and filename - previously in course we used to store image as string, now we have to add url and filename in image, in Listing schema - but I have done correct from starting - and update createLisiting call back in controllers to store actual listing url and filename returned by controller
+
     
 
 
