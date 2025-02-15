@@ -168,7 +168,7 @@ ROW-COLS: splitting screen into rows and cols and adjusting elements size; boots
 
 -->
 
-<!-- 58.Major Project - Phase 3 (Part a) [57] to 
+<!-- 58.Major Project - Phase 3 (Part a) [57] to [76]
     [57] 01. MVC - Model,View, Controller - Model: contains db models, views: contains front-end part (views), controllers: contains all core functionality of backend (ex: all callback functions in routes) - creating new folder controllers and shifting callbacks in listings
 
     [58] 02. Likewise, shifting all callbacks from listing to controllers
@@ -193,10 +193,12 @@ ROW-COLS: splitting screen into rows and cols and adjusting elements size; boots
 
     [76] 11. Display image in index and show roues - which i have already done from begining
 
+-->
+
+<!-- 59. Project - Phase 3 (Part b) [77] 
+    [77] 01. Edit Listing Image - changing edit form for providing option for uploading new image - first changing edit.ejs, form type to file - changing update listing post request in routes and collections - in collection we check first if we have new image, else we donot update new image - refer code
+
     
-
-
-
 
 
 

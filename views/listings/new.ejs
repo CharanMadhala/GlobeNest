@@ -30,9 +30,9 @@
                 <div class="mb-3">
                     <label for="image url" class="form-label">Upload Listing Image</label>
                     <!-- image[url] ..make image as object and url as key, beacuse that's the schema we defined ... ex: {image:{url: }} -->
-                    <input type="file" name="listing[image][url]" class="form-control">
+                    <input type="file" name="listing[image][url]" class="form-control" required>
                 </div>
-                <div class="mb-3">
+                <!-- <div class="mb-3">
                     <label for="image title" class="form-label">Image Title</label>
                     <input type="text" name="listing[image][filename]" placeholder="Enter image title" class="form-control" required>
                     <div class="valid-feedback">
@@ -41,7 +41,7 @@
                     <div class="invalid-feedback">
                         Please choose image title.
                       </div>
-                </div>
+                </div> -->
                 <div class="row">
                     <div class="mb-3 col-md-4">
                         <label for="price" class="form-label">Price</label>

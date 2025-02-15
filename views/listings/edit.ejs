@@ -4,7 +4,7 @@
         <!-- offset-2 takes two spaces from left -->
         <div class="col-8 offset-2">
             <h3>Edit Listing</h3>
-            <form method="POST" action="/listings/<%= listing._id %>?_method=PUT" novalidate class="needs-validation">
+            <form method="POST" action="/listings/<%= listing._id %>?_method=PUT" novalidate class="needs-validation" enctype="multipart/form-data">
                 <!-- each input is given seperate <div> and <label class="form-label"> <input class="form-control">-->
                 <div class="mb-3">
                     <label for="title" class="form-label" required>Title</label>
@@ -30,7 +30,7 @@
                     <label for="image url" class="form-label">Image URL</label>
                     <!-- image[url] ..make image as object and url as key, beacuse that's the schema we defined ... ex: {image:{url: }} -->
                     <!-- making image url required in editing form but not in new.ejs becoz, while deiting existing value default image url will not apply again -->
-                    <input type="text" name="listing[image][url]" value="<%= listing.image.url %>" class="form-control">
+                    <input type="file" name="listing[image][url]"  class="form-control">
                     <div class="valid-feedback">
                         Looks good!
                     </div>
@@ -38,16 +38,16 @@
                         Please provide image.
                     </div>
                 </div>
-                <div class="mb-3">
+                <!-- <div class="mb-3">
                     <label for="image title" class="form-label">Image Title</label>
-                    <input type="text" name="listing[image][filename]" value="<%= listing.image.filename %>" class="form-control" required>
+                    <input type="text" name="listing[image][filename]" value="" class="form-control" required>
                     <div class="valid-feedback">
                         Looks good!
                     </div>
                     <div class="invalid-feedback">
                         Please choose image title.
                       </div>
-                </div>
+                </div> -->
                 <div class="row">
                     <div class="mb-3 col-md-4">
                         <label for="price" class="form-label">Price</label>
