@@ -198,6 +198,8 @@ ROW-COLS: splitting screen into rows and cols and adjusting elements size; boots
 <!-- 59. Project - Phase 3 (Part b) [77] 
     [77] 01. Edit Listing Image - changing edit form for providing option for uploading new image - first changing edit.ejs, form type to file - changing update listing post request in routes and collections - in collection we check first if we have new image, else we donot update new image - refer code
 
+    [78] 02. Image Preview for Edit Page - displaying previous image in edit form with low pixels (using cloudinary API services - refer notes)
+
     
 
 

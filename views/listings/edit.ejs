@@ -27,16 +27,16 @@
                       </div>
                 </div>
                 <div class="mb-3">
-                    <label for="image url" class="form-label">Image URL</label>
+                    Original Listing Image <br>
+                    <img src="<%= originalImageURL %>" alt="preview of listing image" height=250>
+                    
+                </div>
+                <div class="mb-3">
+                    <label for="image url" class="form-label">Upload New Image</label>
                     <!-- image[url] ..make image as object and url as key, beacuse that's the schema we defined ... ex: {image:{url: }} -->
                     <!-- making image url required in editing form but not in new.ejs becoz, while deiting existing value default image url will not apply again -->
                     <input type="file" name="listing[image][url]"  class="form-control">
-                    <div class="valid-feedback">
-                        Looks good!
-                    </div>
-                    <div class="invalid-feedback">
-                        Please provide image.
-                    </div>
+                    
                 </div>
                 <!-- <div class="mb-3">
                     <label for="image title" class="form-label">Image Title</label>
