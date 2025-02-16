@@ -222,8 +222,9 @@ ROW-COLS: splitting screen into rows and cols and adjusting elements size; boots
 -->
 
 <!-- 61. Project - Phase 3 (Part d) [85] 
-    [85]  Using Mongo Atlas - how to create new cloud db - storing data and connecting with local machine
+    [85] 01. Using Mongo Atlas - how to create new cloud db - storing data and connecting with local machine
 
     
+
 
 -->
