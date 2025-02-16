@@ -217,6 +217,8 @@ ROW-COLS: splitting screen into rows and cols and adjusting elements size; boots
 
     [83] 04. Making Tax Switch Functional - when switch is clicked, we will make if either display none or inline to diplay tax in each listing
 
+    [84] 05.Add UI for Search - adding search button in navbar without functionality
+
     
 
 
