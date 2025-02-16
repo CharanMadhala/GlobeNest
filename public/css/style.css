@@ -13,6 +13,7 @@ body {
 .navbar {
     /* height: 5rem !important; */
     background-color: white !important;
+    border-bottom: 1px solid #ebebeb !important;
 }
 .navbar-brand {
     border: none;

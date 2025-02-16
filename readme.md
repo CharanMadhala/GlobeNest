@@ -205,8 +205,13 @@ ROW-COLS: splitting screen into rows and cols and adjusting elements size; boots
 -->
 
 <!-- 60.Project - Phase 3 (Part c) [80] 
-    [80] 01.Fixing Home page - removind Home button in Navbar - removing / route from app.js - changing Add new listing to Airbnb your home in navbar
+    [80] 01.Fixing Home page - removend Home button in Navbar - removing / route from app.js - changing Add new listing to Airbnb your home in navbar
+
+    [81] 02. Add UI for FIlters - dispalying filters on top of index route without functionality - font awesome icons - changes in  index.ejs
 
     
+
+
+
 
 -->
