@@ -207,9 +207,17 @@ ROW-COLS: splitting screen into rows and cols and adjusting elements size; boots
 <!-- 60.Project - Phase 3 (Part c) [80] 
     [80] 01.Fixing Home page - removend Home button in Navbar - removing / route from app.js - changing Add new listing to Airbnb your home in navbar
 
-    [81] 02. Add UI for FIlters - dispalying filters on top of index route without functionality - font awesome icons - changes in  index.ejs
+    [81] 02. Add UI for Filters - dispalying filters on top of index route without functionality - font awesome icons - changes in  index.ejs
 
-    
+    [82] 03. Add UI for Tax Switch - displaying total amount after taxes switch as in Airbnb (using bootstrap checks and radios - switches) - writing script for it in index.ejs itself (attaching event listener and tracking click event)
+
+    Home Work - for Filters in [81] - add Functionality - add category, type string and contains enum array in listings schema (enum: array of categories this listing comes under) - filter only those listings after clicking on that particular filter 
+
+    Home Work - For Filters - when we screen size decreases, display only some filters - use own logic or use bootstrap collapse
+
+
+
+
 
 
 
