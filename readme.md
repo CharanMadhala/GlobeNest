@@ -204,7 +204,7 @@ ROW-COLS: splitting screen into rows and cols and adjusting elements size; boots
 
 -->
 
-<!-- 60.Project - Phase 3 (Part c) [80] 
+<!-- 60.Project - Phase 3 (Part c) [80] to [84]
     [80] 01.Fixing Home page - removend Home button in Navbar - removing / route from app.js - changing Add new listing to Airbnb your home in navbar
 
     [81] 02. Add UI for Filters - dispalying filters on top of index route without functionality - font awesome icons - changes in  index.ejs
@@ -219,13 +219,11 @@ ROW-COLS: splitting screen into rows and cols and adjusting elements size; boots
 
     [84] 05.Add UI for Search - adding search button in navbar without functionality
 
+-->
+
+<!-- 61. Project - Phase 3 (Part d) [85] 
+    [85]  Using Mongo Atlas - how to create new cloud db - storing data and connecting with local machine
+
     
-
-
-
-
-
-
-
 
 -->
