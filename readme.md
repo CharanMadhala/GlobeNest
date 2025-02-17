@@ -224,7 +224,8 @@ ROW-COLS: splitting screen into rows and cols and adjusting elements size; boots
 <!-- 61. Project - Phase 3 (Part d) [85] 
     [85] 01. Using Mongo Atlas - how to create new cloud db - storing data and connecting with local machine
 
-    
+    [86] 02. Mongo Session Store - about storing session in Mongo cloud as colletion - till now we are using express session store which is suitable for localhost and development purpose
 
+    
 
 -->

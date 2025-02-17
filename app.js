@@ -18,6 +18,7 @@ const ejsMate = require("ejs-mate");
 // const wrapAsync = require("./utils/wrapAsync.js");
 const ExpressError = require("./utils/ExpressError.js");
 const session = require("express-session");
+const MongoStore = require('connect-mongo');
 const flash = require("connect-flash");
 // const {listingSchema, reviewSchema} = require("./schema.js");
 // const { error } = require("console");
@@ -49,7 +50,20 @@ async function main(){
     await mongoose.connect(dbUrl);
 }
 
+const store = MongoStore.create({
+    mongoUrl: dbUrl,
+    crypto: {
+        secret: "mysupersecretcode",
+    },
+    touchAfter: 24*3600,
+});
+
+store.on("error", ()=>{
+    console.log("ERROR in MONGO SESSION STORE", err);
+});
+
 const sessionOptions = {
+    store,
     secret: "mysupersecretcode",
     resave: false,
     saveUninitialized: true,
