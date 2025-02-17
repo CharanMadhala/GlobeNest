@@ -228,7 +228,7 @@ ROW-COLS: splitting screen into rows and cols and adjusting elements size; boots
 
     [87] 03. Intro about Render - website/platform for deploying our project - how to create account - It is connected to github - if we push any new commits to github it will automatically update in website
 
-    
+    [88] 04. Push code to Github - creating .gitignore file
 
 
 
