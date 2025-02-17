@@ -1,23 +1,33 @@
 <% layout("/layouts/boilerplate") %>
 
 <body>
+    
     <div class="row">
-        <div class="col-6 offset-3">
+        <div class="col-7 offset-2">
             <h2><%= listing.title %></h2>
             <div class="card show-card listing-card">
                 <img src="<%= listing.image.url %>" class="card-img-top" alt="<%= listing.title %>">
+                <br>
+                <figcaption class="blockquote-footer text-end">
+                    Owned by <cite title="Source Title"><%= listing.owner.username %></cite>
+                  </figcaption>
                 <div class="card-body">
-                  <p class="card-text">Owned by <i><%= listing.owner.username %></i></p>
-                  <p class="card-text"><%= listing.description %></p>
-                  <p class="card-text"> &#8377; <%= listing.price.toLocaleString("en-IN") %> / night </p>
-                  <p class="card-text"><%= listing.location %></p>
-                  <p class="card-text"></p><%= listing.country %> </p>
+                    <dl class="row">
+                        <dt class="col-sm-3">Description</dt>
+                        <dd class="col-sm-9"><%= listing.description %></dd>
                     
+                        <dt class="col-sm-3">Price</dt>
+                        <dd class="col-sm-9">&#8377; <%= listing.price.toLocaleString("en-IN") %> / night </dd>
+                    
+                        <dt class="col-sm-3">Location</dt>
+                        <dd class="col-sm-9"><i class="fa-solid fa-location-dot"></i>  <%= listing.location %>, <%= listing.country %></dd>
+                    </dl>
+                   
                 </div>
             </div>
         </div>
         <% if(currUser && currUser._id.equals(listing.owner._id)) { %>
-        <div class="offset-3 show-btns mb-4">
+        <div class="offset-2 show-btns mb-4">
             
             <a href="/listings/<%= listing._id %>/edit" class="btn btn-primary edit-btn col-1">Edit</a>
 
@@ -27,7 +37,7 @@
             </form>       
         </div>
         <% } %>
-        <div class="col-8 offset-3 mb-3">
+        <div class="col-7 offset-2 mb-3">
             <hr>
             <% if(currUser) { %>
             <h4>Leave a Review</h4>
@@ -71,13 +81,16 @@
                 <div class="row">
                     <% for(review of listing.reviews) {%>
                         <div class="card col-5 mb-3 ms-3">
-                            <div class="card-body">
-                                <h5 class="card-title">@<%= review.author.username %></h5>
+                            <div class="card-body pt-2">
+                                <h5 class="card-title"><i class="fa-regular fa-circle-user"></i> <%= review.author.username %></h5>
                                 <p class="card-text starability-result" data-rating="<%= review.rating %>"></p>
-                                <p class="card-text"><%= review.comment %></p>
+                                <p class="card-text mb-3"><%= review.comment %></p>
+                                <% if(currUser && currUser._id.equals(listing.owner._id)) { %>
                                 <form action="/listings/<%= listing._id %>/reviews/<%= review._id %>?_method=DELETE" method="POST" class="mb-3">
                                     <button class="btn btn-sm btn-dark">Delete</button>
                                 </form>
+                                <% } %>
+
                             </div>
                         </div>
                         

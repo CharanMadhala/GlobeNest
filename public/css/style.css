@@ -34,8 +34,7 @@ body {
 /* cards styling */
 .listing-card {
     border: none;
-    
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 .card-link {
     text-decoration: none;
