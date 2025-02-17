@@ -226,6 +226,10 @@ ROW-COLS: splitting screen into rows and cols and adjusting elements size; boots
 
     [86] 02. Mongo Session Store - about storing session in Mongo cloud as colletion - till now we are using express session store which is suitable for localhost and development purpose
 
+    [87] 03. Intro about Render - website/platform for deploying our project - how to create account - It is connected to github - if we push any new commits to github it will automatically update in website
+
     
+
+
 
 -->
