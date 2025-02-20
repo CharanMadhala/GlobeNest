@@ -32,7 +32,7 @@ body {
 
 /* All listings (index page: index.ejs) */
 /* cards styling */
-.listing-card {
+.listing-card{
     border: none;
     margin-bottom: 1rem;
 }
@@ -84,6 +84,13 @@ body {
     justify-content: left;
     /* width: 100%; */
 }
+
+.review-card{
+    border: 0.1em solid #ebebeba7;
+    border-radius: 1em;
+    padding-top: 0.5em;
+}
+
 
 /* hiding stars */
 .static-reviews {

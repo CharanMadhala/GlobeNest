@@ -82,9 +82,10 @@
                     <% if(listing.reviews.length === 0){ %>
                         <p>No reviews have been posted yet !!</p>
                     <% } %>
+                    <div class="row row-cols-lg-1 row-cols-md-1 rows-cols-sm-1 row-cols-1 mt-2"></div>
                     <% for(review of listing.reviews) {%>
-                        <div class="card col-5 mb-3 ms-3">
-                            <div class="card-body pt-2">
+                        <!-- <div class="card col mb-3 ms-3"> -->
+                            <div class="col ms-3 mb-3 review-card">
                                 <h5 class="card-title"><i class="fa-regular fa-circle-user"></i> <%= review.author.username %></h5>
                                 <div class="static-reviews">
 
@@ -99,9 +100,10 @@
                                 
 
                             </div>
-                        </div>
+                        <!-- </div> -->
                         
                     <% } %>
+                    </div>
 
                 </div>
                 
