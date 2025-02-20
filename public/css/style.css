@@ -7,7 +7,7 @@ body {
     min-height: 100vh;
 }
 .container {
-    /* flew-grow:1 fle-shrink-1 flex-basis: 0 */
+    /* flew-grow:1 flex-shrink-1 flex-basis: 0 */
     flex: 1; 
 }
 .navbar {

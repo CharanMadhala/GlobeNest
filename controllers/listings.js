@@ -83,3 +83,4 @@ module.exports.destroylisting = async (req, res) => {
     res.redirect("/listings");
 };
 
+
