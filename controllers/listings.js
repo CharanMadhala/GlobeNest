@@ -25,6 +25,7 @@ module.exports.showListing = async (req, res) => {
 
   module.exports.showSearchedListing = async (req, res) => {
     const { destintion } = req.query;
+    console.log("req.query: "+ req.query);
     console.log("search query: "+ destintion);
     const allListings = await Listing.find({country: destintion});
     console.log("display lisitng: " + allListings);
