@@ -23,6 +23,20 @@ module.exports.showListing = async (req, res) => {
     // res.send(`get request to ${id}`);
   };
 
+  module.exports.showSearchedListing = async (req, res) => {
+    const { q } = req.query;
+    const listing = await Listing.find({location: q});
+    console.log("display lisitng: " + listing);
+    if(!listing){
+      req.flash("error", "Listing you requested for does not exist!");
+      return res.redirect("/listings");
+    }
+    // console.log(list);
+    res.render("listings/search.ejs", { listing });
+    // console.log(req.params);
+    // res.send(`get request to ${id}`);
+  };
+
 module.exports.createListing = async (req, res, next) => {
     let url = req.file.path;
     let filename = req.file.filename;

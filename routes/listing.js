@@ -56,5 +56,12 @@ router.get(
   wrapAsync(listingController.renderEditForm)
 );
 
+// search route
+router.get(
+  "/search",
+  isLoggedIn,
+  wrapAsync(listingController.showSearchedListing)
+
+);
 
 module.exports = router; 
