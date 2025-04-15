@@ -23,6 +23,13 @@ router
     wrapAsync(listingController.createListing)
 );
   
+// search route
+router.get(
+  "/search",
+  isLoggedIn,
+  wrapAsync(listingController.showSearchedListing)
+
+);
 
   
 //[7]New Route
@@ -56,12 +63,5 @@ router.get(
   wrapAsync(listingController.renderEditForm)
 );
 
-// search route
-router.get(
-  "/search",
-  isLoggedIn,
-  wrapAsync(listingController.showSearchedListing)
-
-);
 
 module.exports = router; 
