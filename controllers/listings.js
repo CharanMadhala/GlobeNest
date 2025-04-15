@@ -25,8 +25,9 @@ module.exports.showListing = async (req, res) => {
 
   module.exports.showSearchedListing = async (req, res) => {
     const { q } = req.query;
+    console.log("search query: "+ q);
     const allListings = await Listing.find({country: q});
-    console.log("display lisitng: " + listing);
+    console.log("display lisitng: " + alllisting);
     if(!allListings){
       req.flash("error", "Listing you requested for does not exist!");
       return res.redirect("/listings");
