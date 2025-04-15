@@ -26,7 +26,6 @@ router
 // search route
 router.get(
   "/search",
-  isLoggedIn,
   wrapAsync(listingController.showSearchedListing)
 
 );
