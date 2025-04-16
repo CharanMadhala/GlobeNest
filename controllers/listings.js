@@ -25,12 +25,16 @@ module.exports.showListing = async (req, res) => {
 
   module.exports.showSearchedListing = async (req, res) => {
     const { destintion } = req.query;
-    console.log("req.query: "+ req.query);
+    // console.log("req.query: "+ req.query);
     console.log("search query: "+ destintion);
     const allListings = await Listing.find({country: destintion});
     console.log("display lisitng: " + allListings);
     if(!allListings){
       req.flash("error", "Listing you requested for does not exist!");
+      return res.redirect("/listings");
+    }
+    if(allListings.length ===0 ){
+      req.flash("error", `${destintion} listings are temporarily unavailable`);
       return res.redirect("/listings");
     }
     // console.log(list);
