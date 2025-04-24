@@ -23,18 +23,27 @@ module.exports.showListing = async (req, res) => {
     // res.send(`get request to ${id}`);
   };
 
+  // for converting the search query to title case
+  function toTitleCase(str) {  
+    return str  
+        .toLowerCase()                      // Convert the entire string to lowercase  
+        .split(' ')                        // Split the string into words  
+        .map(word => word.charAt(0).toUpperCase() + word.slice(1)) // Capitalize the first letter of each word  
+        .join(' ');                        // Join the words back into a single string  
+}  
+
   module.exports.showSearchedListing = async (req, res) => {
     const { destintion } = req.query;
     // console.log("req.query: "+ req.query);
     console.log("search query: "+ destintion);
-    const allListings = await Listing.find({country: destintion});
+    const allListings = await Listing.find({country: toTitleCase(destintion)});
     console.log("display lisitng: " + allListings);
     if(!allListings){
       req.flash("error", "Listing you requested for does not exist!");
       return res.redirect("/listings");
     }
     if(allListings.length ===0 ){
-      req.flash("error", `${destintion} listings are temporarily unavailable`);
+      req.flash("error", `${toTitleCase(destintion)} listings are temporarily unavailable`);
       return res.redirect("/listings");
     }
     // console.log(list);
