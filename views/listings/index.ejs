@@ -115,10 +115,10 @@
                         <b><%= listing.title%></b>
                         <br>
                         &#8377; <%= listing.price.toLocaleString("en-IN") %> / night
-                        <% if(lisitng.price >= 1500){%>
+                        <% if(listing.price >= 1500){%>
                           <i class="tax-info"> &nbsp; &nbsp;+18% GST</i>
                         <% } %>
-                        <% if(lisitng.price < 1500){%>
+                        <% if(listing.price < 1500){%>
                           <i class="tax-info"> &nbsp; &nbsp;+14% GST</i>
                         <% } %>
                       </p>
