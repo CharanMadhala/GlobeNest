@@ -25,25 +25,40 @@ module.exports.showListing = async (req, res) => {
 
 
  // for converting the search query to title case and returning array of all possible combinations
-function toTitleCaseArray(str) {  
-  // Step 1: Split the input string into individual words  
-  const words = str.toLowerCase().split(' ');  
-
-  // Step 2: Capitalize each word  
-  const titleCasedWords = words.map(word => word.charAt(0).toUpperCase() + word.slice(1));  
-
-  // Step 3: Join the capitalized words to form the title case string  
-  const titleCaseString = titleCasedWords.join(' ');  
-
-  // Step 4: Combine title-cased words and the title case string into a single array  
-  return [...titleCasedWords, titleCaseString]; // Spread operator to create a new array  
+ function toTitleCase(str) {  
+  return str.toLowerCase()  
+      .split(' ')  
+      .map(word => word.charAt(0).toUpperCase() + word.slice(1))  
+      .join(' ');  
 }  
+
+function generateCombinations(str) {  
+  const words = str.split(' '); // Step 1: Split into words  
+  const combinations = []; // Array to store the combinations  
+  const totalCombinations = Math.pow(2, words.length); // Calculate total combinations  
+
+  // Step 2: Generate combinations  
+  for (let i = 1; i < totalCombinations; i++) { // Start from 1 to skip the empty combination  
+      let combo = [];  
+      for (let j = 0; j < words.length; j++) {  
+          // Check if j-th bit is set in i  
+          if (i & (1 << j)) {  
+              combo.push(words[j]); // Include this word in the combination  
+          }  
+      }  
+      // Join the selected words and convert to title case, then add to combinations  
+      combinations.push(toTitleCase(combo.join(' ')));  
+  }  
+
+  return combinations;  
+}   
+
 
   module.exports.showSearchedListing = async (req, res) => {
     const { destintion } = req.query;
     // console.log("req.query: "+ req.query);
     console.log("search query: "+ destintion);
-    const result = toTitleCaseArray(destintion);
+    const result = generateCombinations(destintion);
     console.log("Query split array:" + result);
     const allListings = await Listing.find({country: {$in: result }});
     // console.log("display lisitng: " + allListings);
@@ -52,7 +67,7 @@ function toTitleCaseArray(str) {
       return res.redirect("/listings");
     }
     if(allListings.length ===0 ){
-      req.flash("error", `${result[result.length - 1]} listings are temporarily unavailable`);
+      req.flash("error", `${toTitleCase(destintion)} listings are temporarily unavailable`);
       return res.redirect("/listings");
     }
     // console.log(list);
