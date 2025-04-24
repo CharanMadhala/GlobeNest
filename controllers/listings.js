@@ -23,27 +23,35 @@ module.exports.showListing = async (req, res) => {
     // res.send(`get request to ${id}`);
   };
 
-  // for converting the search query to title case
-  function toTitleCase(str) {  
-    return str  
-        .toLowerCase()                      // Convert the entire string to lowercase  
-        .split(' ')                        // Split the string into words  
-        .map(word => word.charAt(0).toUpperCase() + word.slice(1)) // Capitalize the first letter of each word  
-        .join(' ');                        // Join the words back into a single string  
+
+ // for converting the search query to title case and returning array of all possible combinations
+function toTitleCaseArray(str) {  
+  // Step 1: Split the input string into individual words  
+  const words = str.toLowerCase().split(' ');  
+
+  // Step 2: Capitalize each word  
+  const titleCasedWords = words.map(word => word.charAt(0).toUpperCase() + word.slice(1));  
+
+  // Step 3: Join the capitalized words to form the title case string  
+  const titleCaseString = titleCasedWords.join(' ');  
+
+  // Step 4: Combine title-cased words and the title case string into a single array  
+  return [...titleCasedWords, titleCaseString]; // Spread operator to create a new array  
 }  
 
   module.exports.showSearchedListing = async (req, res) => {
     const { destintion } = req.query;
     // console.log("req.query: "+ req.query);
     console.log("search query: "+ destintion);
-    const allListings = await Listing.find({country: toTitleCase(destintion)});
+    const result = toTitleCaseArray(destintion);
+    const allListings = await Listing.find({country: {$in: result }});
     console.log("display lisitng: " + allListings);
     if(!allListings){
       req.flash("error", "Listing you requested for does not exist!");
       return res.redirect("/listings");
     }
     if(allListings.length ===0 ){
-      req.flash("error", `${toTitleCase(destintion)} listings are temporarily unavailable`);
+      req.flash("error", `${result[result.length - 1]} listings are temporarily unavailable`);
       return res.redirect("/listings");
     }
     // console.log(list);
