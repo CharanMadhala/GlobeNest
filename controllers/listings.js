@@ -60,7 +60,12 @@ function generateCombinations(str) {
     console.log("search query: "+ destintion);
     const result = generateCombinations(destintion);
     console.log("Query split array:" + result);
-    const allListings = await Listing.find({country: {$in: result }});
+
+    const regexQueries = result.map(str => ({
+      country: { $regex: str, $options: "i" }  // case-insensitive partial match
+    }));
+
+    const allListings = await Listing.find({ $or: regexQueries });
     // console.log("display lisitng: " + allListings);
     if(!allListings){
       req.flash("error", "Listing you requested for does not exist!");
