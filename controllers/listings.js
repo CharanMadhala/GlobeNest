@@ -44,8 +44,9 @@ function toTitleCaseArray(str) {
     // console.log("req.query: "+ req.query);
     console.log("search query: "+ destintion);
     const result = toTitleCaseArray(destintion);
+    console.log("Query split array:" + result);
     const allListings = await Listing.find({country: {$in: result }});
-    console.log("display lisitng: " + allListings);
+    // console.log("display lisitng: " + allListings);
     if(!allListings){
       req.flash("error", "Listing you requested for does not exist!");
       return res.redirect("/listings");
