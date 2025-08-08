@@ -1,4 +1,4 @@
-<h2> Airbnb (Database:wanderlust, collection: listings, reviews, users) - MEN Stack (without React), RESTful API's</h2>
+<h2> Globenest (Database:wanderlust, collection: listings, reviews, users) - MEN Stack (without React), RESTful API's</h2>
 <ul>
     <li>Index Route: GET /listings - to display all Listings</li>
     <li>Show Route: GET /listings/:id - to display individual lsiting</li>
